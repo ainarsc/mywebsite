@@ -1,0 +1,29 @@
+
+
+
+
+/* Use vh with width and sizes,
+browser has 100 lines so using 100 would cover
+all those lines, 50vh half and so on. */
+
+/* Create utility classes like
+.container {
+max-width: 1180px;
+text-aling: center;
+margin: 0 auto;
+padding: .. ;
+} */
+
+/* In HTML add multiple classes in tags
+simply ---> class="class1 class2 class3" */
+
+/* LEARN MORE ABOUT */
+/* @media queries */
+/* all the @ elements */
+/* imports */
+/* vh, rem and all these abbreviations */
+/* margins */
+/* how to work with classes */
+/* viariables css */
+/* Css and HTML conventions */
+/* CSS pseudo elements */
