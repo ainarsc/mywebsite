@@ -1,5 +1,55 @@
 $primary-color: #444;
+$secondary-color: #ffcc66;
 
-body{
+*{
+  box-sizing: border-box;
+}
+
+body {
   background: $primary-color;
+  color: white;
+  height: 100%;
+  margin: 0;
+  line-height: 1.5;
+  font-family: 'Helvetica', Tahoma, Geneva, sans-serif;
+ }
+
+/* Headings */
+ h1, h2, h3 {
+   margin: 0;
+   font-weight: 100;
+
+   &.lg-heading {
+     font-size: 5rem;
+
+   }
+   &.sm-heading{
+     margin-bottom: 1rem;
+     padding: 0.2rem 1rem;
+     background: rgba(lighten($primary-color, 2), 0.5);
+   }
+ }
+
+ .text-secondary{
+   color: $secondary-color;
+ }
+
+/* Links (inlcuding icons as they are wrapped in a element)*/
+a{
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  /* fixes the little menu button on the top
+  so that even when resizing the page it stays in the corner*/
+  position: fixed;
+}
+
+/** Main section of the page**/
+main{
+  padding: 4rem;
+  height: 100%;
+
+/** continue 18th min  **/
 }
