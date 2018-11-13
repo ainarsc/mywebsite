@@ -1,5 +1,4 @@
 // menu button
-
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -7,7 +6,6 @@
   top:35px;// positioning from the top
   cursor: pointer; //shows the little hand pointer on it
   @include easeOut;
-
   .btn-line{
     width: 28px;
     height: 3px;
@@ -15,7 +13,6 @@
     background: white;
     @include easeOut;
   }
-
   // Rotate into x with menu lines
   &.close{
     transform: rotate(180deg);
@@ -39,5 +36,93 @@
       }
     }
   }
+}
 
+//Menu overlay
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+  // General styling for both sides of overlay
+  &-nav, // menu-nav
+  &-branding{ // menu-branding
+    display: flex; //displays in lines
+    flex-flow: column wrap; // changes to column
+    align-items: center;
+    justify-content: center;
+    float: right;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  //right side
+  &-nav{
+    margin: 0;
+    padding: 0;
+    background: darken($primary-color, 5);
+    list-style: none;
+    //slides up the nav overlay 100%
+    transform: translate3d(0, -100%, 0);
+    @include easeOut;
+    &.show { // same as menu-nav menu-nav.show
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  //left side
+  &-branding{
+    background: $primary-color;
+    //slides up the nav overlay 100%
+    transform: translate3d(0, 100%, 0);
+    @include easeOut;
+    &.show { // same as menu-nav menu-nav.show
+      transform: translate3d(0, 0, 0);
+    }
+    .coolpic{
+      //Think of design for this side
+    }
+  }
+  //Menu options(links)
+  .nav-items {
+    transform: translate3d(600px, 0, 0);
+    @include easeOut;
+    &.show{
+      //slide from the right
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  // Actual links in nav options
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 0.8rem;
+    color: white;
+    text-decoration: none;
+    @include easeOut;
+    &.current{
+      color: $secondary-color;
+    }
+    &:hover{
+      color: $secondary-color;
+    }
+  }
+}
+
+/**or loop same as in java (i = 0; x<y; i++),
+Each x is being multiplied to make each line
+come in seperatly **/
+@for $x from 1 through 4 {
+  .nav-items:nth-child(#{$x}){
+    transition-delay: $x * 0.1s;
+  }
 }

@@ -24,6 +24,73 @@ showing SASS convention**/
     .menu-btn.close .btn-line:nth-child(3) {
       transform: rotate(-45deg) translate(7px, -6px); }
 
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menu-nav, .menu-branding {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden; }
+  .menu-nav {
+    margin: 0;
+    padding: 0;
+    background: #373737;
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.5s ease-out; }
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-branding {
+    background: #444;
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.5s ease-out; }
+    .menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu .nav-items {
+    transform: translate3d(600px, 0, 0);
+    transition: all 0.5s ease-out; }
+    .menu .nav-items.show {
+      transform: translate3d(0, 0, 0); }
+  .menu .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 0.8rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.5s ease-out; }
+    .menu .nav-link.current {
+      color: #ffcc66; }
+    .menu .nav-link:hover {
+      color: #ffcc66; }
+
+/**or loop same as in java (i = 0; x<y; i++),
+Each x is being multiplied to make each line
+come in seperatly **/
+.nav-items:nth-child(1) {
+  transition-delay: 0.1s; }
+
+.nav-items:nth-child(2) {
+  transition-delay: 0.2s; }
+
+.nav-items:nth-child(3) {
+  transition-delay: 0.3s; }
+
+.nav-items:nth-child(4) {
+  transition-delay: 0.4s; }
+
 * {
   box-sizing: border-box; }
 
@@ -36,7 +103,7 @@ body {
   color: white;
   height: 100%;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.2;
   font-family: 'Helvetica', Tahoma, Geneva, sans-serif; }
   body#bg-img {
     background: url(/../dist/img_files/DSC01071.jpg);
