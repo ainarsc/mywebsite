@@ -12,12 +12,14 @@
     integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
     crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css" />
+
     <title>Ainars Ciesa Travels | Welcome</title>
   </head>
   <body id="bg-img">
-    <div class="overlay"></div>
+    <!-- one way of adding this layer this:<div class="overlay"></div> in HTML, added in if statement, formated in SASS variable-->
     <header><!--Menu button and hidden menu-->
-      <div class="menu-btn"><!-- Menu button, the 3 divs will represent 3 lines the icon will be made of -->
+      <div class="menu-btn"><!-- (can be replaced with some icon from fontawsome.com for example)
+        Menu button, the 3 divs will represent 3 lines the icon will be made of -->
         <div class="btn-line"></div>
         <div class="btn-line"></div>
         <div class="btn-line"></div>
@@ -25,20 +27,20 @@
       <!-- menu that pops up when pressing the menu-btn-->
       <nav class="menu">
         <ul class="menu-nav"><!--Menu options with class, links with class -->
-          <li class="nav-item">
+          <li class="nav-items">
             <a href="#" class="nav-link">Home</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-items">
             <a href="#" class="nav-link">My photography</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-items">
             <a href="#" class="nav-link">Blog</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-items">
             <a href="#" class="nav-link">About Me</a>
           </li>
         </ul>
-        <div class="branding"><!--Left side of the menu with visuals -->
+        <div class="menu-branding"><!--Left side of the menu with visuals -->
           <div class="coolpic"></div>
         </div>
       </nav>
@@ -60,7 +62,7 @@
       </div>
     </main>
 
-    <script src="js/main.js"></script>
+  <script src="js/main.js"></script>
   </body>
 
 </html>
