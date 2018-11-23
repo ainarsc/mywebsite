@@ -3,10 +3,12 @@ $secondary-color: #ffcc66;
 $show-home-image: true;
 $home-image: url(/../dist/img_files/DSC01071.jpg);
 $background-opacity: 0.5;
+$about-text-color: #29293d;
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }
+
 
 /** It looks at #bg-img class in the
 body because I included backgound mixin in the body styling
@@ -19,8 +21,6 @@ showing SASS convention**/
       background: $home-image;
       background-attachment: fixed;
       background-size: cover;
-
-      /** Better syntax **/
       &:after { /** after effect, has to include content **/
         content: '';
         position: absolute;
@@ -32,5 +32,34 @@ showing SASS convention**/
         background: rgba($primary-color, $background-opacity);
       }
     }
+  }
+}
+// mixins for CSS media queries
+
+/** These mixins will be imported in different file where
+the resizible content will be styled. The styles don't go here
+as this just specifies the screen sizes **/
+
+// Media query that takes affect on screens 500>=
+@mixin smScreen{
+  @media screen and (max-width: 500px){
+    @content;
+  }
+}
+// Takes effect when screen is 768px <=
+@mixin mdScreen{
+  @media screen and (max-width: 768px){
+    @content;
+  }
+}
+//Takes effect when screen is between 789 and 1170px
+@mixin lgScreen{
+  @media screen and (max-width: 769px) and (max-width: 1170px){
+    @content;
+  }
+}
+@mixin xlScreen{
+  @media screen and (min-width: 1171){
+    @content;
   }
 }

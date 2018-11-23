@@ -14,7 +14,7 @@
     @include easeOut;
   }
   // Rotate into x with menu lines
-  &.close{
+  &.close{ // Class gets added menu-btn lass list by JS once button pressed on the site
     transform: rotate(180deg);
 
     // Line 1 - Rotate
@@ -38,6 +38,7 @@
   }
 }
 
+
 //Menu overlay
 .menu {
   position: fixed;
@@ -45,6 +46,7 @@
   width: 100%;
   opacity: 0.9;
   visibility: hidden;
+
 
   &.show {
     visibility: visible;
@@ -56,7 +58,7 @@
     flex-flow: column wrap; // changes to column
     align-items: center;
     justify-content: center;
-    float: right;
+    float: left;
     width: 50%;
     height: 100vh;
     overflow: hidden;

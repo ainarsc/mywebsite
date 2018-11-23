@@ -1,5 +1,6 @@
 @import 'config';
 @import 'menu';
+@import 'responsive';
 
 *{
   box-sizing: border-box;
@@ -9,7 +10,7 @@ and ID and classes in some cases here are not necessary, remove them from
 HTML markup and just style the HTML element instead **/
 body {
   @include background;
-  background: $primary-color;
+  background: lighten($primary-color, 80%);
   color: white;
   height: 100%;
   margin: 0;
@@ -29,8 +30,11 @@ body {
    }
    &.sm-heading{
      margin-bottom: 1rem;
-     padding: 0.2rem 1rem;
-     background: rgba(lighten($primary-color, 2), 0.5);
+     padding: 0.2rem;
+     .highlightH2{
+       padding: 0.2rem;
+       background: rgba(lighten($primary-color, 2), 0.5);
+     }
    }
  }
 
@@ -66,6 +70,8 @@ main{
     }
   }
 
+
+
   /** This is just a div class so no & used here **/
   .icons {
     margin-top: 1rem;
@@ -82,4 +88,83 @@ main{
       }
     }
   }
+  .fixed-left-side{
+    position: fixed;
+    top: 31vh;
+    left: 0;
+    a{
+      display: block;
+      color: $primary-color;
+    }
+  }
+}
+
+#about{
+  color: $about-text-color;
+  header{
+    background-color: $primary-color;
+  }
+  h2{
+    font-size: 2rem;
+    font-weight: normal;
+    padding: 1.5rem;
+    color: white;
+  }
+  #about-main{
+    padding-top: 7rem;
+  }
+}
+
+.about-content{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  grid-row-gap: 3rem;
+  padding-right: 5rem;
+  padding-left: 5rem;
+  grid-template-areas:
+
+  'pic1 text1'
+  'text2 pic2';
+  .about-text-1{
+    h3{
+      padding-bottom: 8px;
+      font-weight: 400;
+    }
+    grid-area: text1;
+    text-align: justify;
+    font-weight: 100;
+
+  }
+  .about-picture-1{
+    grid-area: pic1;
+    img{
+      width: 100%;
+      margin: auto;
+      border-color: $secondary-color;
+      border-width: thin;
+      border-style: solid;
+    }
+  }
+  .about-text-2{
+    grid-area: text2;
+    text-align: justify;
+    font-weight: 100;
+  }
+  .about-picture-2{
+    grid-area: pic2;
+    img{
+      width: 100%;
+      margin: auto;
+      border-color: $secondary-color;
+      border-width: thin;
+      border-style: solid;
+    }
+  }
+}
+.footie{
+  text-align: center;
+  background-color: lighten($primary-color, 20%);
+  color: $secondary-color;
+  padding: 1rem;
 }

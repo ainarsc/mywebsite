@@ -2,6 +2,9 @@
 body because I included backgound mixin in the body styling
 The following could be set up in the body or other way, but this is
 showing SASS convention**/
+/** These mixins will be imported in different file where
+the resizible content will be styled. The styles don't go here
+as this just specifies the screen sizes **/
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -37,7 +40,7 @@ showing SASS convention**/
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    float: right;
+    float: left;
     width: 50%;
     height: 100vh;
     overflow: hidden; }
@@ -91,6 +94,30 @@ come in seperatly **/
 .nav-items:nth-child(4) {
   transition-delay: 0.4s; }
 
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; }
+  .menu .nav-link {
+    font-size: 15px; }
+  .menu-nav,
+  .menu-branding {
+    float: none;
+    min-height: 0;
+    width: 100%; }
+  .menu-branding {
+    height: 35vh;
+    transform: translate3d(-100%, 0, 0); }
+  .menu-nav {
+    height: 65vh;
+    transform: translate3d(100%, 0, 0); } }
+
 * {
   box-sizing: border-box; }
 
@@ -99,7 +126,7 @@ and ID and classes in some cases here are not necessary, remove them from
 HTML markup and just style the HTML element instead **/
 body {
   /** checks the variable thats set to true/false at the global scope **/
-  background: #444;
+  background: white;
   color: white;
   height: 100%;
   margin: 0;
@@ -108,8 +135,7 @@ body {
   body#bg-img {
     background: url(/../dist/img_files/DSC01071.jpg);
     background-attachment: fixed;
-    background-size: cover;
-    /** Better syntax **/ }
+    background-size: cover; }
     body#bg-img:after {
       /** after effect, has to include content **/
       content: '';
@@ -131,8 +157,10 @@ h1, h2, h3 {
     /** SCSS syntax **/ }
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 1rem;
-    padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    padding: 0.2rem; }
+    h1.sm-heading .highlightH2, h2.sm-heading .highlightH2, h3.sm-heading .highlightH2 {
+      padding: 0.2rem;
+      background: rgba(73, 73, 73, 0.5); }
 
 .text-secondary {
   color: #ffcc66; }
@@ -171,3 +199,64 @@ main {
         /** SASS syntax **/
         /** One way of using this, better way to use mixins **/
         /** transition: all 0.5s ease-out; **/ }
+  main .fixed-left-side {
+    position: fixed;
+    top: 31vh;
+    left: 0; }
+    main .fixed-left-side a {
+      display: block;
+      color: #444; }
+
+#about {
+  color: #29293d; }
+  #about header {
+    background-color: #444; }
+  #about h2 {
+    font-size: 2rem;
+    font-weight: normal;
+    padding: 1.5rem;
+    color: white; }
+  #about #about-main {
+    padding-top: 7rem; }
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  grid-row-gap: 3rem;
+  padding-right: 5rem;
+  padding-left: 5rem;
+  grid-template-areas: 'pic1 text1' 'text2 pic2'; }
+  .about-content .about-text-1 {
+    grid-area: text1;
+    text-align: justify;
+    font-weight: 100; }
+    .about-content .about-text-1 h3 {
+      padding-bottom: 8px;
+      font-weight: 400; }
+  .about-content .about-picture-1 {
+    grid-area: pic1; }
+    .about-content .about-picture-1 img {
+      width: 100%;
+      margin: auto;
+      border-color: #ffcc66;
+      border-width: thin;
+      border-style: solid; }
+  .about-content .about-text-2 {
+    grid-area: text2;
+    text-align: justify;
+    font-weight: 100; }
+  .about-content .about-picture-2 {
+    grid-area: pic2; }
+    .about-content .about-picture-2 img {
+      width: 100%;
+      margin: auto;
+      border-color: #ffcc66;
+      border-width: thin;
+      border-style: solid; }
+
+.footie {
+  text-align: center;
+  background-color: #777777;
+  color: #ffcc66;
+  padding: 1rem; }
