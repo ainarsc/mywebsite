@@ -3,7 +3,7 @@ $secondary-color: #ffcc66;
 $show-home-image: true;
 $home-image: url(/../dist/img_files/DSC01071.jpg);
 $background-opacity: 0.5;
-$about-text-color: #29293d;
+$theme-text-color: #29293d;
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
@@ -33,6 +33,9 @@ showing SASS convention**/
       }
     }
   }
+}
+@mixin shadow{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 // mixins for CSS media queries
 

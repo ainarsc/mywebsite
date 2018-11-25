@@ -161,6 +161,8 @@ h1, h2, h3 {
     h1.sm-heading .highlightH2, h2.sm-heading .highlightH2, h3.sm-heading .highlightH2 {
       padding: 0.2rem;
       background: rgba(73, 73, 73, 0.5); }
+  h1.page-heading, h2.page-heading, h3.page-heading {
+    margin-left: 5rem; }
 
 .text-secondary {
   color: #ffcc66; }
@@ -169,6 +171,15 @@ h1, h2, h3 {
 a {
   color: white;
   text-decoration: none; }
+
+.blog-title {
+  padding-left: 0; }
+
+.blog-text {
+  font-size: 1rem;
+  font-weight: 100;
+  margin-left: auto;
+  text-align: justify; }
 
 header {
   /* fixes the little menu button on the top
@@ -179,11 +190,11 @@ header {
 
 /** Main section of the page**/
 main {
-  /** For ID #home in the <main> element to be referenced & has to be used**/
-  padding: 4em;
-  overflow: hidden;
   /** This is just a div class so no & used here **/ }
   main#home {
+    /** For ID #home in the <main> element to be referenced & has to be used**/
+    padding: 4em;
+    overflow: hidden;
     height: 100vh; }
     main#home h1 {
       margin-top: 20vh; }
@@ -207,16 +218,16 @@ main {
       display: block;
       color: #444; }
 
-#about {
+#theme {
   color: #29293d; }
-  #about header {
+  #theme header {
     background-color: #444; }
-  #about h2 {
-    font-size: 2rem;
-    font-weight: normal;
-    padding: 1.5rem;
-    color: white; }
-  #about #about-main {
+    #theme header h2 {
+      font-size: 2rem;
+      font-weight: normal;
+      padding: 1.5rem;
+      color: white; }
+  #theme #page-content {
     padding-top: 7rem; }
 
 .about-content {
@@ -257,6 +268,29 @@ main {
 
 .footie {
   text-align: center;
-  background-color: #777777;
+  background-color: #6a6a6a;
   color: #ffcc66;
-  padding: 1rem; }
+  padding: 0.5rem; }
+
+.blog-gridlayout {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 2rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-bottom: 1rem;
+  grid-template-areas: 'post sidebar'; }
+
+.blog-entries {
+  grid-area: post; }
+  .blog-entries .blog-entry {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+    .blog-entries .blog-entry article {
+      padding: 0.5rem; }
+      .blog-entries .blog-entry article h5 {
+        margin-top: 0.5rem; }
+
+.sidebar {
+  grid-area: sidebar;
+  max-height: 50vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
