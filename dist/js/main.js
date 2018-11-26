@@ -11,8 +11,9 @@ const navItems = document.querySelectorAll('.nav-items');
 let showMenu = false;
 
 menuBtn.addEventListener('click', toggleMenu);
-function toggleMenu(){
-  if(!showMenu){
+
+function toggleMenu() {
+  if (!showMenu) {
     menuBtn.classList.add('close');
     menu.classList.add('show');
     menuNav.classList.add('show');
@@ -28,4 +29,21 @@ function toggleMenu(){
     showMenu = false;
   }
 
+}
+
+
+function showMore(postNr, dotNr, btnNr) {
+  var dots = document.getElementById(dotNr);
+  var moreText = document.getElementById(postNr);
+  var btnText = document.getElementById(btnNr);
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
 }

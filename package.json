@@ -9,6 +9,7 @@
   "author": "Ainars Ciesa",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^4.10.0"
+    "node-sass": "^4.10.0",
+    "readmore-js": "^2.2.1"
   }
 }

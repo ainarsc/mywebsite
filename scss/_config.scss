@@ -2,14 +2,19 @@ $primary-color: #444;
 $secondary-color: #ffcc66;
 $show-home-image: true;
 $home-image: url(/../dist/img_files/DSC01071.jpg);
+$side-margin: 8rem;
 $background-opacity: 0.5;
 $theme-text-color: #29293d;
+$hidetext: none;
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }
 
-
+@mixin sidemargins{
+  margin-left: $side-margin;
+  margin-right: $side-margin;
+}
 /** It looks at #bg-img class in the
 body because I included backgound mixin in the body styling
 The following could be set up in the body or other way, but this is

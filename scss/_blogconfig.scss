@@ -1,0 +1,39 @@
+$japan-image: url(/../dist/img_files/japan.jpg);
+$india-image: url(/../dist/img_files/india.jpg);
+$australia-image: url(/../dist/img_files/australia.jpg);
+$nepal-image: url(/../dist/img_files/nepal.jpg);
+$newzealand-image: url(/../dist/img_files/newzealand.jpg);
+$southkorea-image: url(/../dist/img_files/southkorea.jpg);
+$vietnam-image: url(/../dist/img_files/vietnam.jpg);
+$iceland-image: url(/../dist/img_files/iceland.jpg);
+
+
+
+.japan{
+  background: $japan-image;
+}
+.india{
+  background: $india-image;
+
+}
+.australia{
+  background: $australia-image;
+}
+
+.newzealand{
+  background: $newzealand-image;
+}
+
+.southkorea{
+  background: $southkorea-image;
+}
+.nepal{
+  background: $nepal-image;
+}
+.vietnam{
+  background: $vietnam-image;
+}
+
+.iceland{
+  background: $iceland-image;
+}

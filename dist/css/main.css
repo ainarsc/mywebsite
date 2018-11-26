@@ -118,6 +118,30 @@ come in seperatly **/
     height: 65vh;
     transform: translate3d(100%, 0, 0); } }
 
+.japan {
+  background: url(/../dist/img_files/japan.jpg); }
+
+.india {
+  background: url(/../dist/img_files/india.jpg); }
+
+.australia {
+  background: url(/../dist/img_files/australia.jpg); }
+
+.newzealand {
+  background: url(/../dist/img_files/newzealand.jpg); }
+
+.southkorea {
+  background: url(/../dist/img_files/southkorea.jpg); }
+
+.nepal {
+  background: url(/../dist/img_files/nepal.jpg); }
+
+.vietnam {
+  background: url(/../dist/img_files/vietnam.jpg); }
+
+.iceland {
+  background: url(/../dist/img_files/iceland.jpg); }
+
 * {
   box-sizing: border-box; }
 
@@ -162,7 +186,10 @@ h1, h2, h3 {
       padding: 0.2rem;
       background: rgba(73, 73, 73, 0.5); }
   h1.page-heading, h2.page-heading, h3.page-heading {
-    margin-left: 5rem; }
+    padding: 0;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    margin-bottom: 0.5rem; }
 
 .text-secondary {
   color: #ffcc66; }
@@ -276,21 +303,46 @@ main {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-gap: 2rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
   margin-bottom: 1rem;
   grid-template-areas: 'post sidebar'; }
+  .blog-gridlayout button {
+    background-color: #eaeaea;
+    color: #444;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 2rem;
+    font-size: 1rem;
+    border: none; }
 
 .blog-entries {
   grid-area: post; }
   .blog-entries .blog-entry {
+    background-color: white;
+    margin-bottom: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+    .blog-entries .blog-entry .img-box {
+      min-height: 50vh;
+      max-height: 50vh;
+      padding: 0;
+      background-color: #444;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0.8; }
     .blog-entries .blog-entry article {
       padding: 0.5rem; }
-      .blog-entries .blog-entry article h5 {
-        margin-top: 0.5rem; }
+      .blog-entries .blog-entry article .blog-description {
+        margin-top: 0.2rem; }
 
 .sidebar {
   grid-area: sidebar;
   max-height: 50vh;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+#post8, #post7,
+#post6, #post5, #post4, #post3, #post2, #post1 {
+  display: none; }

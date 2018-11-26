@@ -1,6 +1,7 @@
 @import 'config';
 @import 'menu';
 @import 'responsive';
+@import 'blogconfig';
 
 *{
   box-sizing: border-box;
@@ -37,7 +38,9 @@ body {
      }
    }
    &.page-heading{
-     margin-left: 5rem;
+     padding: 0;
+     @include sidemargins;
+     margin-bottom: 0.5rem;
    }
  }
 
@@ -181,24 +184,50 @@ main{
 }
 .blog-gridlayout{
   display: grid;
+
   grid-template-columns: 3fr 1fr;
   grid-gap: 2rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
+  @include sidemargins;
   margin-bottom: 1rem;
   grid-template-areas:
   'post sidebar';
-
+  button{
+    background-color: lighten($primary-color,65%);
+    //background: linear-gradient(to bottom, transparent, lighten($primary-color, 30%));
+    color: $primary-color;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 2rem;
+    font-size: 1rem;
+    border: none;
+    //: linear-gradient(to bottom, transparent, black);
+  }
 }
 
 .blog-entries{
   grid-area: post;
 
   .blog-entry{
+    .img-box{
+      min-height: 50vh;
+      max-height: 50vh;
+      padding: 0;
+      background-color: $primary-color;
+      width: 100%;
+      background-position: center;
+      background-size:cover;
+      background-repeat: no-repeat;
+      opacity: 0.8;
+    }
+    background-color: lighten($primary-color, 75%);
+    margin-bottom: 1rem;
     @include shadow;
+
     article{
-      h5{
-        margin-top: 0.5rem;
+      .blog-description{
+        margin-top: 0.2rem;
+        //margin-bottom: 0.2rem;
       }
       padding: 0.5rem;
     }
@@ -208,4 +237,9 @@ main{
   grid-area: sidebar;
   max-height: 50vh;
   @include shadow;
+}
+
+#post8, #post7,
+#post6, #post5, #post4, #post3, #post2, #post1 {
+  display: $hidetext;
 }
