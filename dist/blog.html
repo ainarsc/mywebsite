@@ -13,27 +13,6 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-  <!--<script>
-
-  $(document).ready(function(){
-    var readMoreHtml = $(".read-more").html();
-    var lessText = readMoreHtml.substr(0, 100);
-
-    if(readMoreHtml.length > 100){
-      $(".read-more").html(lessText).append("<a href='' class='read-more-link'> ... Read more</a>");
-    } else {
-      $(".read-more").html(readMoreHtml);
-    }
-
-    $("body").on("click", ".read-more-link", function(event){
-      event.preventDefault();
-      $(this).parent(".read-more").html(readMoreHtml).append("<a href='.top' class='show-less-link'>Show less</a>")});
-    $("body").on("click", ".show-less-link", function(event){
-      event.preventDefault();
-      $(this).parent(".read-more").html(readMoreHtml.substr(0, 100)).append("<a href='#top' class='read-more-link'> ... Read more</a>")});
-  });
-</script> -->
   <title>Ainars Ciesa Travels | Blog</title>
 </head>
 
@@ -78,185 +57,122 @@
       <!-- BLOG POSTS -->
       <div class="blog-entries">
         <div class="blog-entry">
-          <div class="img-box india">
-            <!--emppty space for the blog cover -->
-          </div>
+          <a href="india.html">
+            <div class="img-box-sm india">
+              <!--emppty space for the blog cover -->
+            </div>
+          </a>
           <article class="blog-article">
-            <h1 class="blog-title">INDIA</h1>
+            <h1 class="blog-title"><a class="blog-title-link" href="india.html">INDIA</a></h1>
             <h5 class="blog-description">Title description, <span class="">November 7, 2018</span></h5>
             <p class="blog-text read-more">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta est eius quos itaque fugiat, consectetur perferendis. Nisi minima sint assumenda aliquid maxime tenetur eius incidunt, nihil aliquam
-              explicabo doloremque sapiente
-              <span id="nr8">...</span><span id="post8">voluptate. Excepturi eum veritatis debitis nemo fugiat, id eius. Animi ea, recusandae eligendi eos assumenda mollitia officia dolorum voluptate autem pariatur, et aperiam maiores
-              corporis impedit asperiores voluptatem. Voluptatum sunt
-              nisi totam aliquid est, at repellat natus eius voluptates doloribus explicabo, minus unde excepturi mollitia aut assumenda necessitatibus sequi error exercitationem tempora fugiat impedit molestiae aliquam. Excepturi aspernatur sed,
-              officiis iusto labore molestias quos earum sint similique expedita odio inventore molestiae, debitis id ipsam modi repellat autem ad quis. Iusto voluptatem quisquam dicta dolor iste ut magni saepe eaque incidunt iure vel suscipit
-              placeat
-              sed aliquam, praesentium esse cum nulla exercitationem veritatis quas fuga. Quae repellendus, veritatis vitae dicta accusamus rerum tempore aliquid repellat totam eos saepe magni cupiditate eum sit sapiente, commodi labore beatae
-              voluptate! Quidem optio exercitationem nulla rem dolore mollitia debitis ex nesciunt ipsam, nobis corporis similique eveniet tempora quia perspiciatis ipsa illum molestiae expedita natus laudantium omnis sed totam facere! At deserunt
-              incidunt quas hic nam nobis vel eveniet, cumque maxime reiciendis et sed optio, beatae id doloribus accusantium odio, culpa animi quo quidem quis. Adipisci eius perferendis qui natus nihil praesentium ipsam veritatis sapiente voluptate
-              illum est aliquid pariatur ducimus inventore repellat libero molestias cum, recusandae non voluptas tempora labore. Est sint id ipsa quam, eius sapiente perferendis aspernatur. Soluta odio, itaque autem veritatis dicta praesentium
-              saepe
-              sapiente necessitatibus, aliquam reprehenderit quidem explicabo placeat magnam eligendi temporibus distinctio natus iste fugit illum expedita deserunt blanditiis asperiores vel provident esse! Incidunt et soluta sit saepe placeat rerum
-              totam dolores modi, quis? Ducimus accusantium beatae aspernatur laboriosam quod dignissimos, repellendus minima deleniti! Obcaecati, nostrum veniam repudiandae illum.</span></p>
+              explicabo doloremque sapiente</p>
           </article>
-          <button onclick="showMore('post8', 'nr8', 'myBtn8')" id="myBtn8">Read more</button>
+          <!--<button onclick="showMore('post8', 'nr8', 'myBtn8')" id="myBtn8">Read more</button>-->
         </div>
         <!-- End of Blog entry No 1-->
         <div class="blog-entry">
-          <div class="img-box nepal">
-            <!--emppty space for the blog cover -->
-          </div>
+          <a href="">
+            <div class="img-box-sm nepal">
+              <!--emppty space for the blog cover -->
+            </div>
+          </a>
           <article class="blog-article">
-            <h1 class="blog-title">NEPAL</h1>
+            <h1 class="blog-title"><a class="blog-title-link" href="">NEPAL</a></h1>
             <h5 class="blog-description">Title description, <span class="">August 2, 2018</span></h5>
             <p class="blog-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta est eius quos itaque fugiat, consectetur perferendis. Nisi minima sint assumenda aliquid maxime tenetur eius incidunt, nihil aliquam explicabo
-              doloremque sapiente
-              e molestias quos earum sint similique expedita odio inventore molestiae, debitis id ipsam modi repellat autem ad quis. Iusto voluptatem quisquam dicta dolor iste ut magni saepe eaque incidunt iure vel suscipit
-              placeat<span id="nr7">...</span><span id="post7">
-              sed aliquam, praesentium esse cum nulla exercitationem veritatis quas fuga. Quae repellendus, veritatis vitae dicta accusamus rerum tempore aliquid repellat totam eos saepe magni cupiditate eum sit sapiente, commodi labore beatae
-              voluptate! Quidem optio exercitationem nulla rem dolore mollitia debitis ex nesciunt ipsam, nobis corporis similique eveniet tempora quia perspiciatis ipsa illum molestiae expedita natus laudantium omnis sed totam facere! At deserunt
-              incidunt quas hic nam nobis vel eveniet, cumque maxime reiciendis et sed optio, beatae id doloribus accusantium odio, culpa animi quo quidem quis. Adipisci eius perferendis qui natus nihil praesentium ipsam veritatis sapiente voluptate
-              illum est aliquid pariatur ducimus inventore repellat libero molestias cum, recusandae non voluptas tempora labore. Est sint id ipsa quam, eius sapiente perferendis aspernatur. Soluta odio, itaque autem veritatis dicta praesentium
-              saepe
-              sapiente necessitatibus, aliquam reprehenderit quidem explicabo placeat magnam eligendi temporibus distinctio natus iste fugit illum expedita deserunt blanditiis asperiores vel provident esse! Incidunt et soluta sit saepe placeat rerum
-              totam dolores modi, quis? Ducimus accusantium beatae aspernatur laboriosam quod dignissimos, repellendus minima deleniti! Obcaecati, nostrum veniam repudiandae illum.</span></p>
+              doloremque sapiente</p>
           </article>
-          <button onclick="showMore('post7', 'nr7', 'myBtn7')" id="myBtn7">Read more</button>
+          <!--<button onclick="showMore('post7', 'nr7', 'myBtn7')" id="myBtn7">Read more</button>-->
         </div>
         <!-- End of blog entry 2 -->
         <div class="blog-entry">
-          <div class="img-box southkorea">
-            <!--emppty space for the blog cover -->
-          </div>
+          <a href="">
+            <div class="img-box-sm southkorea">
+              <!--emppty space for the blog cover -->
+            </div>
+          </a>
           <article class="blog-article">
-            <h1 class="blog-title">South Korea</h1>
+            <h1 class="blog-title"><a class="blog-title-link" href="">SOUTH KOREA</a></h1>
             <h5 class="blog-description">Title description, <span class="">August 2, 2018</span></h5>
-            <p class="blog-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta est eius quos itaque fugiat, consectetur perferendis. Nisi minima sint assumenda aliquid maxime tenetur eius incidunt, nihil aliquam explicabo
-              doloremque sapiente
-               aliquid est, at repellat natus eius voluptates doloribus explicabo, minus unde excepturi mollitia aut assumenda necessitatibus sequi error exercitationem tempora fugiat impedit molestiae aliquam. Excepturi aspernatur sed,
-              officiis iusto labore molestias quos earum sint similique expedita odio inventore molestiae, debitis id ipsam modi repellat autem ad quis. Iusto voluptatem quisquam dicta dolor iste ut magni saepe eaque incidunt iure vel suscipit
-              placeat<span id="nr6">...</span><span id="post6">
-              sed aliquam, praesentium esse cum nulla exercitationem veritatis quas fuga. Quae repellendus, veritatis vitae dicta accusamus rerum tempore aliquid repellat totam eos saepe magni cupiditate eum sit sapiente, commodi labore beatae
-              voluptate! Quidem optio exercitationem nulla rem dolore mollitia debitis ex nesciunt ipsam, nobis corporis similique eveniet tempora quia perspiciatis ipsa illum molestiae expedita natus laudantium omnis sed totam facere! At deserunt
-              incidunt quas hic nam nobis vel eveniet, cumque maxime reiciendis et sed optio, beatae id doloribus accusantium odio, culpa animi quo quidem quis. Adipisci eius perferendis qui natus nihil praesentium ipsam veritatis sapiente voluptate
-              illum est aliquid pariatur ducimus inventore repellat libero molestias cum, recusandae non voluptas tempora labore. Est sint id ipsa quam, eius sapiente perferendis aspernatur. Soluta odio, itaque autem veritatis dicta praesentium
-              saepe
-              sapiente necessitatibus, aliquam reprehenderit quidem explicabo placeat magnam eligendi temporibus distinctio natus iste fugit illum expedita deserunt blanditiis asperiores vel provident esse! Incidunt et soluta sit saepe placeat rerum
-              totam dolores modi, quis? Ducimus accusantium beatae aspernatur laboriosam quod dignissimos, repellendus minima deleniti! Obcaecati, nostrum veniam repudiandae illum.</span></p>
+            <p class="blog-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta est eius quos itaque fugiat, consectetur perferendis. Nisi minima sint assumenda aliquid maxime tenetur eius incidunt, nihil aliquam explicabo</p>
           </article>
-          <button onclick="showMore('post6', 'nr6', 'myBtn6')" id="myBtn6">Read more</button>
+          <!--<button onclick="showMore('post6', 'nr6', 'myBtn6')" id="myBtn6">Read more</button>-->
         </div>
         <!-- End of blog entry 3 -->
         <div class="blog-entry">
-          <div class="img-box japan">
-            <!--emppty space for the blog cover -->
-          </div>
+          <a href="">
+            <div class="img-box-sm japan">
+              <!--emppty space for the blog cover -->
+            </div>
+          </a>
           <article class="blog-article">
-            <h1 class="blog-title">JAPAN</h1>
+            <h1 class="blog-title"><a class="blog-title-link" href="">JAPAN</a></h1>
             <h5 class="blog-description">Title description, <span class="">August 2, 2018</span></h5>
             <p class="blog-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta est eius quos itaque fugiat, consectetur perferendis. Nisi minima sint assumenda aliquid maxime tenetur eius incidunt, nihil aliquam explicabo
-              doloremque sapiente
-               labore molestias quos earum sint similique expedita odio inventore molestiae, debitis id ipsam modi repellat autem ad quis. Iusto voluptatem quisquam dicta dolor iste ut magni saepe eaque incidunt iure vel suscipit
-              placeat<span id="nr5">...</span><span id="post5">
-              sed aliquam, praesentium esse cum nulla exercitationem veritatis quas fuga. Quae repellendus, veritatis vitae dicta accusamus rerum tempore aliquid repellat totam eos saepe magni cupiditate eum sit sapiente, commodi labore beatae
-              voluptate! Quidem optio exercitationem nulla rem dolore mollitia debitis ex nesciunt ipsam, nobis corporis similique eveniet tempora quia perspiciatis ipsa illum molestiae expedita natus laudantium omnis sed totam facere! At deserunt
-              incidunt quas hic nam nobis vel eveniet, cumque maxime reiciendis et sed optio, beatae id doloribus accusantium odio, culpa animi quo quidem quis. Adipisci eius perferendis qui natus nihil praesentium ipsam veritatis sapiente voluptate
-              illum est aliquid pariatur ducimus inventore repellat libero molestias cum, recusandae non voluptas tempora labore. Est sint id ipsa quam, eius sapiente perferendis aspernatur. Soluta odio, itaque autem veritatis dicta praesentium
-              saepe
-              sapiente necessitatibus, aliquam reprehenderit quidem explicabo placeat magnam eligendi temporibus distinctio natus iste fugit illum expedita deserunt blanditiis asperiores vel provident esse! Incidunt et soluta sit saepe placeat rerum
-              totam dolores modi, quis? Ducimus accusantium beatae aspernatur laboriosam quod dignissimos, repellendus minima deleniti! Obcaecati, nostrum veniam repudiandae illum.</span></p>
+              doloremque sapiente</p>
           </article>
-          <button onclick="showMore('post5', 'nr5', 'myBtn5')" id="myBtn5">Read more</button>
+          <!--<button onclick="showMore('post5', 'nr5', 'myBtn5')" id="myBtn5">Read more</button>-->
         </div>
         <!-- End of blog entry 4 -->
         <div class="blog-entry">
-          <div class="img-box australia">
-            <!--emppty space for the blog cover -->
-          </div>
+          <a href="">
+            <div class="img-box-sm australia">
+              <!--emppty space for the blog cover -->
+            </div>
+          </a>
           <article class="blog-article">
-            <h1 class="blog-title">AUSTRALIA</h1>
+            <h1 class="blog-title"><a class="blog-title-link" href="">AUSTRALIA</a></h1>
             <h5 class="blog-description">Title description, <span class="">August 2, 2018</span></h5>
             <p class="blog-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta est eius quos itaque fugiat, consectetur perferendis. Nisi minima sint assumenda aliquid maxime tenetur eius incidunt, nihil aliquam explicabo
-              doloremque sapiente
-              o labore molestias quos earum sint similique expedita odio inventore molestiae, debitis id ipsam modi repellat autem ad quis. Iusto voluptatem quisquam dicta dolor iste ut magni saepe eaque incidunt iure vel suscipit
-              placeat<span id="nr4">...</span><span id="post4">
-              sed aliquam, praesentium esse cum nulla exercitationem veritatis quas fuga. Quae repellendus, veritatis vitae dicta accusamus rerum tempore aliquid repellat totam eos saepe magni cupiditate eum sit sapiente, commodi labore beatae
-              voluptate! Quidem optio exercitationem nulla rem dolore mollitia debitis ex nesciunt ipsam, nobis corporis similique eveniet tempora quia perspiciatis ipsa illum molestiae expedita natus laudantium omnis sed totam facere! At deserunt
-              incidunt quas hic nam nobis vel eveniet, cumque maxime reiciendis et sed optio, beatae id doloribus accusantium odio, culpa animi quo quidem quis. Adipisci eius perferendis qui natus nihil praesentium ipsam veritatis sapiente voluptate
-              illum est aliquid pariatur ducimus inventore repellat libero molestias cum, recusandae non voluptas tempora labore. Est sint id ipsa quam, eius sapiente perferendis aspernatur. Soluta odio, itaque autem veritatis dicta praesentium
-              saepe
-              sapiente necessitatibus, aliquam reprehenderit quidem explicabo placeat magnam eligendi temporibus distinctio natus iste fugit illum expedita deserunt blanditiis asperiores vel provident esse! Incidunt et soluta sit saepe placeat rerum
-              totam dolores modi, quis? Ducimus accusantium beatae aspernatur laboriosam quod dignissimos, repellendus minima deleniti! Obcaecati, nostrum veniam repudiandae illum.</span></p>
+              doloremque sapiente</p>
           </article>
-          <button onclick="showMore('post4', 'nr4', 'myBtn4')" id="myBtn4">Read more</button>
+          <!--<button onclick="showMore('post4', 'nr4', 'myBtn4')" id="myBtn4">Read more</button>-->
         </div>
         <!-- End of blog entry 5 -->
         <div class="blog-entry">
-          <div class="img-box newzealand">
-            <!--emppty space for the blog cover -->
-          </div>
+          <a href="">
+            <div class="img-box-sm newzealand">
+              <!--emppty space for the blog cover -->
+            </div>
+          </a>
           <article class="blog-article">
-            <h1 class="blog-title">NEW ZEALAND</h1>
+            <h1 class="blog-title"><a class="blog-title-link" href="">NEW ZEALAND</a></h1>
             <h5 class="blog-description">Title description, <span class="">August 2, 2018</span></h5>
             <p class="blog-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta est eius quos itaque fugiat, consectetur perferendis. Nisi minima sint assumenda aliquid maxime tenetur eius incidunt, nihil aliquam explicabo
-              doloremque sapiente
-              am aliquid est, at repellat natus eius voluptates doloribus explicabo, minus unde excepturi mollitia aut assumenda necessitatibus sequi error exercitationem tempora fugiat impedit molestiae aliquam. Excepturi aspernatur sed,
-              officiis iusto labore molestias quos earum sint similique expedita odio inventore molestiae, debitis id ipsam modi repellat autem ad quis. Iusto voluptatem quisquam dicta dolor iste ut magni saepe eaque incidunt iure vel suscipit
-              placeat<span id="nr3">...</span><span id="post3">sed aliquam, praesentium esse cum nulla exercitationem veritatis quas fuga. Quae repellendus, veritatis vitae dicta accusamus rerum tempore aliquid repellat totam eos saepe magni cupiditate eum sit sapiente, commodi labore beatae
-              voluptate! Quidem optio exercitationem nulla rem dolore mollitia debitis ex nesciunt ipsam, nobis corporis similique eveniet tempora quia perspiciatis ipsa illum molestiae expedita natus laudantium omnis sed totam facere! At deserunt
-              incidunt quas hic nam nobis vel eveniet, cumque maxime reiciendis et sed optio, beatae id doloribus accusantium odio, culpa animi quo quidem quis. Adipisci eius perferendis qui natus nihil praesentium ipsam veritatis sapiente voluptate
-              illum est aliquid pariatur ducimus inventore repellat libero molestias cum, recusandae non voluptas tempora labore. Est sint id ipsa quam, eius sapiente perferendis aspernatur. Soluta odio, itaque autem veritatis dicta praesentium
-              saepe
-              sapiente necessitatibus, aliquam reprehenderit quidem explicabo placeat magnam eligendi temporibus distinctio natus iste fugit illum expedita deserunt blanditiis asperiores vel provident esse! Incidunt et soluta sit saepe placeat rerum
-              totam dolores modi, quis? Ducimus accusantium beatae aspernatur laboriosam quod dignissimos, repellendus minima deleniti! Obcaecati, nostrum veniam repudiandae illum.</span></p>
+              doloremque sapienteam.</p>
           </article>
-          <button onclick="showMore('post3', 'nr3', 'myBtn3')" id="myBtn3">Read more</button>
+          <!--<button onclick="showMore('post3', 'nr3', 'myBtn3')" id="myBtn3">Read more</button>-->
         </div>
         <!-- End of blog entry 6 -->
         <div class="blog-entry">
-          <div class="img-box vietnam">
-            <!--emppty space for the blog cover -->
-          </div>
+          <a href="">
+            <div class="img-box-sm vietnam">
+              <!--emppty space for the blog cover -->
+            </div>
+          </a>
           <article class="blog-article">
-            <h1 class="blog-title">VIETNAM</h1>
+            <h1 class="blog-title"><a class="blog-title-link" href="">VIETNAM</a></h1>
             <h5 class="blog-description">Title description, <span class="">August 2, 2018</span></h5>
             <p class="blog-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta est eius quos itaque fugiat, consectetur perferendis. Nisi minima sint assumenda aliquid maxime tenetur eius incidunt, nihil aliquam explicabo
-              doloremque sapiente
-              aliquid est, at repellat natus eius voluptates doloribus explicabo, minus unde excepturi mollitia aut assumenda necessitatibus sequi error exercitationem tempora fugiat impedit molestiae aliquam. Excepturi aspernatur sed,
-              officiis iusto labore molestias quos earum sint similique expedita odio inventore molestiae, debitis id ipsam modi repellat autem ad quis. Iusto voluptatem quisquam dicta dolor iste ut magni saepe eaque incidunt iure vel suscipit
-              placeat<span id="nr2">...</span><span id="post2">
-              sed aliquam, praesentium esse cum nulla exercitationem veritatis quas fuga. Quae repellendus, veritatis vitae dicta accusamus rerum tempore aliquid repellat totam eos saepe magni cupiditate eum sit sapiente, commodi labore beatae
-              voluptate! Quidem optio exercitationem nulla rem dolore mollitia debitis ex nesciunt ipsam, nobis corporis similique eveniet tempora quia perspiciatis ipsa illum molestiae expedita natus laudantium omnis sed totam facere! At deserunt
-              incidunt quas hic nam nobis vel eveniet, cumque maxime reiciendis et sed optio, beatae id doloribus accusantium odio, culpa animi quo quidem quis. Adipisci eius perferendis qui natus nihil praesentium ipsam veritatis sapiente voluptate
-              illum est aliquid pariatur ducimus inventore repellat libero molestias cum, recusandae non voluptas tempora labore. Est sint id ipsa quam, eius sapiente perferendis aspernatur. Soluta odio, itaque autem veritatis dicta praesentium
-              saepe
-              sapiente necessitatibus, aliquam reprehenderit quidem explicabo placeat magnam eligendi temporibus distinctio natus iste fugit illum expedita deserunt blanditiis asperiores vel provident esse! Incidunt et soluta sit saepe placeat rerum
-              totam dolores modi, quis? Ducimus accusantium beatae aspernatur laboriosam quod dignissimos, repellendus minima deleniti! Obcaecati, nostrum veniam repudiandae illum.</span></p>
+              doloremque sapiente</p>
           </article>
-          <button onclick="showMore('post2', 'nr2', 'myBtn2')" id="myBtn2">Read more</button>
+          <!--<button onclick="showMore('post2', 'nr2', 'myBtn2')" id="myBtn2">Read more</button>-->
         </div>
         <!-- End of blog entry 7 -->
         <div class="blog-entry">
-          <div class="img-box iceland">
-            <!--emppty space for the blog cover -->
-          </div>
+          <a href="">
+            <div class="img-box-sm iceland">
+              <!--emppty space for the blog cover -->
+            </div>
+          </a>
           <article class="blog-article">
-            <h1 class="blog-title">ICELAND</h1>
+            <h1 class="blog-title"><a class="blog-title-link" href="">ICELAND</a></h1>
             <h5 class="blog-description">Title description, <span class="">August 2, 2018</span></h5>
             <p class="blog-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta est eius quos itaque fugiat, consectetur perferendis. Nisi minima sint assumenda aliquid maxime tenetur eius incidunt, nihil aliquam explicabo
-              doloremque sapiente
-               aliquid est, at repellat natus eius voluptates doloribus explicabo, minus unde excepturi mollitia aut assumenda necessitatibus sequi error exercitationem tempora fugiat impedit molestiae aliquam. Excepturi aspernatur sed,
-              officiis iusto labore molestias quos earum sint similique expedita odio inventore molestiae, debitis id ipsam modi repellat autem ad quis. Iusto voluptatem quisquam dicta dolor iste ut magni saepe eaque incidunt iure vel suscipit
-              placeat<span id="nr1">...</span><span id="post1">
-              sed aliquam, praesentium esse cum nulla exercitationem veritatis quas fuga. Quae repellendus, veritatis vitae dicta accusamus rerum tempore aliquid repellat totam eos saepe magni cupiditate eum sit sapiente, commodi labore beatae
-              voluptate! Quidem optio exercitationem nulla rem dolore mollitia debitis ex nesciunt ipsam, nobis corporis similique eveniet tempora quia perspiciatis ipsa illum molestiae expedita natus laudantium omnis sed totam facere! At deserunt
-              incidunt quas hic nam nobis vel eveniet, cumque maxime reiciendis et sed optio, beatae id doloribus accusantium odio, culpa animi quo quidem quis. Adipisci eius perferendis qui natus nihil praesentium ipsam veritatis sapiente voluptate
-              illum est aliquid pariatur ducimus inventore repellat libero molestias cum, recusandae non voluptas tempora labore. Est sint id ipsa quam, eius sapiente perferendis aspernatur. Soluta odio, itaque autem veritatis dicta praesentium
-              saepe
-              sapiente necessitatibus, aliquam reprehenderit quidem explicabo placeat magnam eligendi temporibus distinctio natus iste fugit illum expedita deserunt blanditiis asperiores vel provident esse! Incidunt et soluta sit saepe placeat rerum
-              totam dolores modi, quis? Ducimus accusantium beatae aspernatur laboriosam quod dignissimos, repellendus minima deleniti! Obcaecati, nostrum veniam repudiandae illum.</span></p>
+              doloremque sapiente</p>
           </article>
-          <button onclick="showMore('post1', 'nr1', 'myBtn1')" id="myBtn1">Read more</button>
+          <!--<button onclick="showMore('post1', 'nr1', 'myBtn1')" id="myBtn1">Read more</button>-->
         </div>
         <!-- End of blog entry 8 -->
       </div>

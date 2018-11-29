@@ -11,7 +11,7 @@ and ID and classes in some cases here are not necessary, remove them from
 HTML markup and just style the HTML element instead **/
 body {
   @include background;
-  background: lighten($primary-color, 80%);
+  background: lighten($primary-color, 70%);
   color: white;
   height: 100%;
   margin: 0;
@@ -42,6 +42,7 @@ body {
      @include sidemargins;
      margin-bottom: 0.5rem;
    }
+
  }
 
  .text-secondary{
@@ -52,15 +53,21 @@ body {
 a{
   color: white;
   text-decoration: none;
+  &.blog-title-link{
+    color: $primary-color;
+    text-decoration: none;
+  }
 }
 .blog-title{
   padding-left: 0;
+  font-weight: 600;
 }
 .blog-text{
   font-size: 1rem;
   font-weight: 100;
   margin-left: auto;
   text-align: justify;
+
 }
 header {
   /* fixes the little menu button on the top
@@ -177,6 +184,7 @@ main{
   }
 }
 .footie{
+
   text-align: center;
   background-color: lighten($primary-color, 15%);
   color: $secondary-color;
@@ -184,34 +192,25 @@ main{
 }
 .blog-gridlayout{
   display: grid;
-
   grid-template-columns: 3fr 1fr;
   grid-gap: 2rem;
   @include sidemargins;
   margin-bottom: 1rem;
   grid-template-areas:
   'post sidebar';
-  button{
-    background-color: lighten($primary-color,65%);
-    //background: linear-gradient(to bottom, transparent, lighten($primary-color, 30%));
-    color: $primary-color;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    min-height: 2rem;
-    font-size: 1rem;
-    border: none;
-    //: linear-gradient(to bottom, transparent, black);
-  }
 }
 
 .blog-entries{
   grid-area: post;
-
   .blog-entry{
-    .img-box{
-      min-height: 50vh;
-      max-height: 50vh;
+    display: grid;
+    grid-template-columns: 1.5fr 3fr;
+    grid-template-areas:
+    'picture intro';
+    .img-box-sm{
+      grid-area: picture;
+      min-height: 35vh;
+      max-height: 35vh;
       padding: 0;
       background-color: $primary-color;
       width: 100%;
@@ -222,11 +221,18 @@ main{
     }
     background-color: lighten($primary-color, 75%);
     margin-bottom: 1rem;
+    //@include easeOut;
     @include shadow;
-
+    //@include fade;
+    @include grow;
+    @include easeOut;
     article{
+      max-height: 35vh;
+      grid-area: intro;
+
       .blog-description{
         margin-top: 0.2rem;
+        color: darken($secondary-color, 30%);
         //margin-bottom: 0.2rem;
       }
       padding: 0.5rem;
@@ -237,9 +243,29 @@ main{
   grid-area: sidebar;
   max-height: 50vh;
   @include shadow;
+  h3{
+    padding: 0.5rem;
+    font-weight: 600;
+  }
 }
 
-#post8, #post7,
-#post6, #post5, #post4, #post3, #post2, #post1 {
-  display: $hidetext;
+// BLOG POST ARTICLE PAGE ELEMENTS
+
+.blog-article-full-text{
+  text-align: justify;
+  line-height: 1.5;
+}
+.img-box-lg{
+  width: 100%;
+  min-height: 70vh;
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  #blog-heading{
+    text-align: center;
+    padding-top: 25%;
+    font-size: 3rem;
+    font-weight: 300;
+  }
 }

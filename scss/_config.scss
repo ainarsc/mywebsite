@@ -2,7 +2,7 @@ $primary-color: #444;
 $secondary-color: #ffcc66;
 $show-home-image: true;
 $home-image: url(/../dist/img_files/DSC01071.jpg);
-$side-margin: 8rem;
+$side-margin: 6rem;
 $background-opacity: 0.5;
 $theme-text-color: #29293d;
 $hidetext: none;
@@ -41,6 +41,20 @@ showing SASS convention**/
 }
 @mixin shadow{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@mixin fade{
+  opacity: 0.8;
+  &:hover{
+    opacity: 1;
+  }
+}
+@mixin grow{
+  &:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
 }
 // mixins for CSS media queries
 
