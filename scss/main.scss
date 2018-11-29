@@ -3,84 +3,82 @@
 @import 'responsive';
 @import 'blogconfig';
 
+// General styling
 *{
   box-sizing: border-box;
 }
-/** Look into refactoring the code, a lot of the & are not necessary
-and ID and classes in some cases here are not necessary, remove them from
-HTML markup and just style the HTML element instead **/
 body {
   @include background;
   background: lighten($primary-color, 70%);
-  color: white;
+  color: $theme-text-color;
   height: 100%;
   margin: 0;
   line-height: 1.2;
   font-family: 'Helvetica', Tahoma, Geneva, sans-serif;
- }
+}
 
-/* Headings */
- h1, h2, h3 {
-   margin: 0;
-   font-weight: 100;
+// HEADINGS
+h1, h2, h3, h4, h5{
+  margin: 0;
+  font-weight: 100;
+  padding-bottom: 0.5rem;
 
-  /** the & references the class or ID **/
-   &.lg-heading {
-     font-size: 5rem;
-  /** SCSS syntax **/
-   }
-   &.sm-heading{
-     margin-bottom: 1rem;
-     padding: 0.2rem;
-     .highlightH2{
-       padding: 0.2rem;
-       background: rgba(lighten($primary-color, 2), 0.5);
-     }
-   }
-   &.page-heading{
-     padding: 0;
-     @include sidemargins;
-     margin-bottom: 0.5rem;
-   }
-
- }
-
- .text-secondary{
-   color: $secondary-color;
- }
-
-/* Links (inlcuding icons as they are wrapped in a element)*/
-a{
-  color: white;
-  text-decoration: none;
-  &.blog-title-link{
-    color: $primary-color;
-    text-decoration: none;
+  &.home-lg-heading {
+   font-size: 5rem;
+   color: white;
+  }
+  &.home-sm-heading{
+    color: white;
+    margin-bottom: 1rem;
+    padding: 0.2rem;
+    .highlightH2{
+      padding: 0.2rem;
+      background: rgba(lighten($primary-color, 2), 0.5);
+    }
+  }
+  &.font-weight-6x{
+    font-weight: 600;
+  }
+  &.font-weight-4x{
+    font-weight: 400;
+  }
+  &.font-weight-2x{
+    font-weight: 200;
+  }
+  &.heading-font-size-lg{
+    font-size: 3rem;
+  }
+  &.heading-font-size-md{
+    font-size: 2rem;
+  }
+  &.heading-font-size-sm{
+    font-size: 1.2rem;
   }
 }
-.blog-title{
-  padding-left: 0;
-  font-weight: 600;
-}
-.blog-text{
-  font-size: 1rem;
-  font-weight: 100;
-  margin-left: auto;
-  text-align: justify;
 
+// LINKS
+a{
+   color: white;
+   text-decoration: none;
+   &.blog-title-link{
+     color: $primary-color;
+     text-decoration: none;
+  }
 }
+
+.text-secondary{
+  color: $secondary-color;
+}
+
 header {
-  /* fixes the little menu button on the top
-  so that even when resizing the page it stays in the corner*/
   position: fixed;
   z-index: 2;
   width: 100%;
 }
 
-/** Main section of the page**/
+// MAIN CONTENT STYLING
 main{
   &#home{
-    /** For ID #home in the <main> element to be referenced & has to be used**/
     padding: 4em;
     //border: 1px solid;
     overflow: hidden;
@@ -89,10 +87,10 @@ main{
       margin-top: 20vh;
     }
   }
-
-
-
-  /** This is just a div class so no & used here **/
+  &#page-content{
+    padding-bottom: 2rem;
+  }
+  // Social Media Icons
   .icons {
     margin-top: 1rem;
     /** icon links **/
@@ -119,9 +117,8 @@ main{
   }
 }
 
-#theme{
-  color: $theme-text-color;
-
+// Page theme
+#page-theme{
   header{
     background-color: $primary-color;
     h2{
@@ -132,7 +129,23 @@ main{
     }
   }
   #page-content{
-    padding-top: 7rem;
+    padding-top: 6rem;
+    @include sidemargins;
+  }
+  h1.page-heading{
+    //@include sidemargins;
+    margin-bottom: 0.5rem;
+  }
+  p{
+    margin: 0;
+    text-align: justify;
+    font-weight: 100;
+  }
+  footer{
+    text-align: center;
+    background-color: lighten($primary-color, 15%);
+    color: $secondary-color;
+    padding: 0.5rem;
   }
 }
 
@@ -141,116 +154,84 @@ main{
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
   grid-row-gap: 3rem;
-  padding-right: 5rem;
-  padding-left: 5rem;
   grid-template-areas:
-
   'pic1 text1'
   'text2 pic2';
   .about-text-1{
-    h3{
-      padding-bottom: 8px;
-      font-weight: 400;
-    }
     grid-area: text1;
-    text-align: justify;
-    font-weight: 100;
-
   }
   .about-picture-1{
     grid-area: pic1;
     img{
       width: 100%;
       margin: auto;
-      border-color: $secondary-color;
-      border-width: thin;
-      border-style: solid;
     }
   }
   .about-text-2{
     grid-area: text2;
-    text-align: justify;
-    font-weight: 100;
   }
   .about-picture-2{
     grid-area: pic2;
     img{
       width: 100%;
       margin: auto;
-      border-color: $secondary-color;
-      border-width: thin;
-      border-style: solid;
     }
   }
 }
-.footie{
 
-  text-align: center;
-  background-color: lighten($primary-color, 15%);
-  color: $secondary-color;
-  padding: 0.5rem;
-}
 .blog-gridlayout{
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-gap: 2rem;
-  @include sidemargins;
   margin-bottom: 1rem;
   grid-template-areas:
   'post sidebar';
-}
 
-.blog-entries{
-  grid-area: post;
-  .blog-entry{
-    display: grid;
-    grid-template-columns: 1.5fr 3fr;
-    grid-template-areas:
-    'picture intro';
-    .img-box-sm{
-      grid-area: picture;
-      min-height: 35vh;
-      max-height: 35vh;
-      padding: 0;
-      background-color: $primary-color;
-      width: 100%;
-      background-position: center;
-      background-size:cover;
-      background-repeat: no-repeat;
-      opacity: 0.8;
-    }
-    background-color: lighten($primary-color, 75%);
-    margin-bottom: 1rem;
-    //@include easeOut;
-    @include shadow;
-    //@include fade;
-    @include grow;
-    @include easeOut;
-    article{
-      max-height: 35vh;
-      grid-area: intro;
-
-      .blog-description{
-        margin-top: 0.2rem;
-        color: darken($secondary-color, 30%);
-        //margin-bottom: 0.2rem;
+  .blog-entries{
+    grid-area: post;
+    .blog-entry{
+      display: grid;
+      grid-template-columns: 1.5fr 3fr;
+      grid-template-areas:
+      'picture intro';
+      .img-box-sm{
+        grid-area: picture;
+        min-height: 35vh;
+        max-height: 35vh;
+        padding: 0;
+        background-color: $primary-color;
+        width: 100%;
+        background-position: center;
+        background-size:cover;
+        background-repeat: no-repeat;
+        opacity: 0.8;
       }
+      background-color: lighten($primary-color, 75%);
+      margin-bottom: 1rem;
+      @include shadow;
+      @include grow;
+      @include easeOut;
+      article{
+        max-height: 35vh;
+        grid-area: intro;
+        .blog-description{
+          color: darken($secondary-color, 30%);
+        }
+        padding: 0.5rem;
+      }
+    }
+  }
+  .sidebar{
+    grid-area: sidebar;
+    max-height: 50vh;
+    @include shadow;
+    h3{
       padding: 0.5rem;
     }
   }
 }
-.sidebar{
-  grid-area: sidebar;
-  max-height: 50vh;
-  @include shadow;
-  h3{
-    padding: 0.5rem;
-    font-weight: 600;
-  }
-}
 
 // BLOG POST ARTICLE PAGE ELEMENTS
-
 .blog-article-full-text{
   text-align: justify;
   line-height: 1.5;
