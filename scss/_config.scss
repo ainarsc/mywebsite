@@ -1,16 +1,26 @@
 $primary-color: #444;
 $secondary-color: #ffcc66;
+$secondary-color-nr2: #763626;
 $show-home-image: true;
 $home-image: url(/../dist/img_files/DSC01071.jpg);
-$side-margin: 6rem;
+$side-margin: 12rem;
 $background-opacity: 0.5;
 $theme-text-color: #29293d;
 $hidetext: none;
+$body-background-tone: 70%;
+$box-background-color: lighten($primary-color, 95%);
+$box-corner-radius: 5px;
+$site-font: 'Helvetica', Tahoma, Geneva, sans-serif;
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }
-
+@mixin round-corners{
+  border-top-left-radius: $box-corner-radius;
+  border-top-right-radius: $box-corner-radius;
+  border-bottom-right-radius: $box-corner-radius;
+  border-bottom-left-radius: $box-corner-radius;
+}
 @mixin sidemargins{
   margin-left: $side-margin;
   margin-right: $side-margin;
