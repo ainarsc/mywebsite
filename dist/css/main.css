@@ -188,6 +188,8 @@ h1, h2, h3, h4, h5 {
   h1.font-weight-2x, h2.font-weight-2x, h3.font-weight-2x, h4.font-weight-2x, h5.font-weight-2x {
     font-weight: 200; }
   h1.heading-font-size-lg, h2.heading-font-size-lg, h3.heading-font-size-lg, h4.heading-font-size-lg, h5.heading-font-size-lg {
+    font-size: 4rem; }
+  h1.heading-font-size-xlg, h2.heading-font-size-xlg, h3.heading-font-size-xlg, h4.heading-font-size-xlg, h5.heading-font-size-xlg {
     font-size: 5rem; }
   h1.heading-font-size-md, h2.heading-font-size-md, h3.heading-font-size-md, h4.heading-font-size-md, h5.heading-font-size-md {
     font-size: 2rem; }
@@ -390,3 +392,6 @@ main .fixed-left-side {
   transition: all 0.5s ease-out; }
   .other-posts-sections:hover {
     opacity: 1; }
+
+.gallery {
+  min-height: 100vh; }
