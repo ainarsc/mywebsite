@@ -451,3 +451,7 @@ main .fixed-left-side {
 .gallery {
   min-height: 100vh;
   color: grey; }
+  .gallery p {
+    padding-left: 50vh;
+    padding-top: 25vh;
+    font-size: 4rem; }
