@@ -9,8 +9,8 @@
 
 body {
   @include background;
-  background: lighten($primary-color, 70%);
-  color: $theme-text-color;
+  background: $background-tone;
+  color: $font-color-dark;
   height: 100%;
   margin: 0;
   line-height: 1.2;
@@ -26,11 +26,11 @@ h5 {
   font-weight: 100;
   &.home-lg-heading {
     font-size: 5rem;
-    color: white;
+    color: $font-color-light;
   }
 
   &.home-sm-heading {
-    color: white;
+    color: $font-color-light;
     margin-bottom: 1rem;
     padding: 0.2rem;
 
@@ -73,7 +73,7 @@ h5 {
   }
 
   &.heading-white {
-    color: white;
+    color: $font-color-light;
   }
 }
 
@@ -85,11 +85,11 @@ p {
 // LINKS
 
 a {
-  color: $text-color-light;
+  color: $font-color-light;
   text-decoration: none;
 
   &.blog-title-link {
-    color: $primary-color;
+    color: $font-color-dark;
     text-decoration: none;
   }
 }
@@ -163,13 +163,16 @@ main {
       font-size: 2rem;
       font-weight: normal;
       padding: 1.5rem;
-      color: $text-color-light;
+      color: $font-color-light;
     }
   }
   footer{
     text-align: center;
-    background-color: blue;
+    background-color: $primary-color;
     padding: 0.5rem;
+    font-weight: 100;
+    font-size: 0.8rem;
+    color: darken($font-color-light, 10%);
   }
 
 
@@ -196,10 +199,7 @@ main {
   img {
     width: 100%;
     margin: auto;
-    border-bottom-right-radius: $box-corner-radius;
-    border-bottom-left-radius: $box-corner-radius;
-    border-top-right-radius: $box-corner-radius;
-    border-top-left-radius: $box-corner-radius;
+    @include round-corners;
   }
 
   .about-text-1 {
@@ -258,10 +258,9 @@ main {
         max-height: 35vh;
         grid-area: intro;
         .blog-description {
-          color: darken($secondary-color, 30%);
+          color: $font-color-alternative;
         }
         padding: 0.5rem;
-        //overflow: hidden;
       }
     }
   }
@@ -314,7 +313,11 @@ main {
   background-size: cover;
   padding: 1rem;
   margin-bottom: 1rem;
-  color: $text-color-light;
+  color: $font-color-light;
+  h4{
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
   @include round-corners;
   @include shadow;
   @include fade;
@@ -323,4 +326,5 @@ main {
 // PORTFOLIO MAIN Page
 .gallery {
   min-height: 100vh;
+  color: grey;
 }

@@ -1,21 +1,21 @@
-$primary-color: #444;
-$secondary-color: #ffcc66;
-$third-color: #763626;
-$forth-color: grey;
-$text-color-light: white;
-$text-color-black: black;
-$heading-color-light: white;
-$heading-color-dark: black;
-$body-background-tone: 70%;
+$primary-color: #2D3033;
+$secondary-color: #AA4B41;
+$background-tone: lighten($primary-color, 79%);
+$box-background-color: lighten($primary-color, 95%);
+$font-color-light: lighten(#D4DDE1, 10%);
+$font-color-dark: #335252;
+$font-color-alternative: $secondary-color;
 $show-home-image: true;
 $home-image: url(/../dist/img_files/DSC01071.jpg);
 $side-margin: 12rem;
 $background-opacity: 0.5;
 $hidetext: none;
-$box-background-color: lighten($primary-color, 95%);
 $box-corner-radius: 5px;
-$site-font: 'Helvetica', Tahoma, Geneva, sans-serif;
-
+$site-font: "Raleway", sans-serif;
+//'Raleway', Tahoma, Geneva, sans-serif;
+//#444
+//#ffcc66
+//'Helvetica'
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }

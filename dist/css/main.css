@@ -47,14 +47,14 @@ as this just specifies the screen sizes **/
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #373737;
+    background: #212325;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #444;
+    background: #2D3033;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
@@ -71,13 +71,13 @@ as this just specifies the screen sizes **/
     font-weight: 300;
     text-transform: uppercase;
     padding: 0.8rem;
-    color: white;
+    color: #f2f5f6;
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link.current {
-      color: #ffcc66; }
+      color: #AA4B41; }
     .menu .nav-link:hover {
-      color: #ffcc66; }
+      color: #AA4B41; }
 
 /**or loop same as in java (i = 0; x<y; i++),
 Each x is being multiplied to make each line
@@ -147,12 +147,12 @@ come in seperatly **/
 
 body {
   /** checks the variable thats set to true/false at the global scope **/
-  background: #f7f7f7;
-  color: #29293d;
+  background: #f9f9fa;
+  color: #335252;
   height: 100%;
   margin: 0;
   line-height: 1.2;
-  font-family: "Helvetica", Tahoma, Geneva, sans-serif; }
+  font-family: "Raleway", sans-serif; }
   body#bg-img {
     background: url(/../dist/img_files/DSC01071.jpg);
     background-attachment: fixed;
@@ -166,39 +166,91 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.5); }
+      background: rgba(45, 48, 51, 0.5); }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 0;
   font-weight: 100; }
-  h1.home-lg-heading, h2.home-lg-heading, h3.home-lg-heading, h4.home-lg-heading, h5.home-lg-heading {
+  h1.home-lg-heading,
+  h2.home-lg-heading,
+  h3.home-lg-heading,
+  h4.home-lg-heading,
+  h5.home-lg-heading {
     font-size: 5rem;
-    color: white; }
-  h1.home-sm-heading, h2.home-sm-heading, h3.home-sm-heading, h4.home-sm-heading, h5.home-sm-heading {
-    color: white;
+    color: #f2f5f6; }
+  h1.home-sm-heading,
+  h2.home-sm-heading,
+  h3.home-sm-heading,
+  h4.home-sm-heading,
+  h5.home-sm-heading {
+    color: #f2f5f6;
     margin-bottom: 1rem;
     padding: 0.2rem; }
-    h1.home-sm-heading .highlightH2, h2.home-sm-heading .highlightH2, h3.home-sm-heading .highlightH2, h4.home-sm-heading .highlightH2, h5.home-sm-heading .highlightH2 {
+    h1.home-sm-heading .highlightH2,
+    h2.home-sm-heading .highlightH2,
+    h3.home-sm-heading .highlightH2,
+    h4.home-sm-heading .highlightH2,
+    h5.home-sm-heading .highlightH2 {
       padding: 0.2rem;
-      background: rgba(73, 73, 73, 0.5); }
-  h1.font-weight-6x, h2.font-weight-6x, h3.font-weight-6x, h4.font-weight-6x, h5.font-weight-6x {
+      background: rgba(50, 53, 56, 0.5); }
+  h1.font-weight-6x,
+  h2.font-weight-6x,
+  h3.font-weight-6x,
+  h4.font-weight-6x,
+  h5.font-weight-6x {
     font-weight: 600; }
-  h1.font-weight-4x, h2.font-weight-4x, h3.font-weight-4x, h4.font-weight-4x, h5.font-weight-4x {
+  h1.font-weight-4x,
+  h2.font-weight-4x,
+  h3.font-weight-4x,
+  h4.font-weight-4x,
+  h5.font-weight-4x {
     font-weight: 400; }
-  h1.font-weight-2x, h2.font-weight-2x, h3.font-weight-2x, h4.font-weight-2x, h5.font-weight-2x {
+  h1.font-weight-2x,
+  h2.font-weight-2x,
+  h3.font-weight-2x,
+  h4.font-weight-2x,
+  h5.font-weight-2x {
     font-weight: 200; }
-  h1.heading-font-size-lg, h2.heading-font-size-lg, h3.heading-font-size-lg, h4.heading-font-size-lg, h5.heading-font-size-lg {
+  h1.heading-font-size-lg,
+  h2.heading-font-size-lg,
+  h3.heading-font-size-lg,
+  h4.heading-font-size-lg,
+  h5.heading-font-size-lg {
     font-size: 4rem; }
-  h1.heading-font-size-xlg, h2.heading-font-size-xlg, h3.heading-font-size-xlg, h4.heading-font-size-xlg, h5.heading-font-size-xlg {
+  h1.heading-font-size-xlg,
+  h2.heading-font-size-xlg,
+  h3.heading-font-size-xlg,
+  h4.heading-font-size-xlg,
+  h5.heading-font-size-xlg {
     font-size: 5rem; }
-  h1.heading-font-size-md, h2.heading-font-size-md, h3.heading-font-size-md, h4.heading-font-size-md, h5.heading-font-size-md {
+  h1.heading-font-size-md,
+  h2.heading-font-size-md,
+  h3.heading-font-size-md,
+  h4.heading-font-size-md,
+  h5.heading-font-size-md {
     font-size: 2rem; }
-  h1.heading-font-size-sm, h2.heading-font-size-sm, h3.heading-font-size-sm, h4.heading-font-size-sm, h5.heading-font-size-sm {
+  h1.heading-font-size-sm,
+  h2.heading-font-size-sm,
+  h3.heading-font-size-sm,
+  h4.heading-font-size-sm,
+  h5.heading-font-size-sm {
     font-size: 1.2rem; }
-  h1.heading-center, h2.heading-center, h3.heading-center, h4.heading-center, h5.heading-center {
+  h1.heading-center,
+  h2.heading-center,
+  h3.heading-center,
+  h4.heading-center,
+  h5.heading-center {
     text-align: center; }
-  h1.heading-white, h2.heading-white, h3.heading-white, h4.heading-white, h5.heading-white {
-    color: white; }
+  h1.heading-white,
+  h2.heading-white,
+  h3.heading-white,
+  h4.heading-white,
+  h5.heading-white {
+    color: #f2f5f6; }
 
 p {
   text-align: justify;
@@ -206,14 +258,14 @@ p {
   padding: 0.5rem; }
 
 a {
-  color: white;
+  color: #f2f5f6;
   text-decoration: none; }
   a.blog-title-link {
-    color: #444;
+    color: #335252;
     text-decoration: none; }
 
 .text-secondary {
-  color: #ffcc66; }
+  color: #AA4B41; }
 
 .extra-padding-top {
   padding-top: 1rem; }
@@ -231,7 +283,10 @@ main#home {
     margin-top: 20vh; }
 
 main#page-content {
-  padding-bottom: 2rem; }
+  padding-bottom: 2rem;
+  padding-top: 6rem;
+  margin-left: 12rem;
+  margin-right: 12rem; }
 
 main .icons {
   margin-top: 1rem;
@@ -240,7 +295,7 @@ main .icons {
     padding: 0.5rem;
     /** SCSS syntax **/ }
     main .icons a:hover {
-      color: #ffcc66;
+      color: #AA4B41;
       transition: all 0.5s ease-out;
       /** SASS syntax **/
       /** One way of using this, better way to use mixins **/
@@ -252,20 +307,23 @@ main .fixed-left-side {
   left: 0; }
   main .fixed-left-side a {
     display: block;
-    color: #444; }
+    color: #2D3033; }
 
 #page-theme header {
-  background-color: #444; }
+  background-color: #2D3033; }
   #page-theme header h2 {
     font-size: 2rem;
     font-weight: normal;
     padding: 1.5rem;
-    color: white; }
+    color: #f2f5f6; }
 
-#page-theme #page-content {
-  padding-top: 6rem;
-  margin-left: 12rem;
-  margin-right: 12rem; }
+#page-theme footer {
+  text-align: center;
+  background-color: #2D3033;
+  padding: 0.5rem;
+  font-weight: 100;
+  font-size: 0.8rem;
+  color: #d4dde1; }
 
 #page-theme h1.page-heading {
   margin-bottom: 0.5rem; }
@@ -274,12 +332,6 @@ main .fixed-left-side {
   margin: 0;
   text-align: justify;
   font-weight: 100; }
-
-#page-theme footer {
-  text-align: center;
-  background-color: #6a6a6a;
-  color: #ffcc66;
-  padding: 0.5rem; }
 
 .about-content {
   display: grid;
@@ -290,10 +342,10 @@ main .fixed-left-side {
   .about-content img {
     width: 100%;
     margin: auto;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    border-top-left-radius: 5px; }
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px; }
   .about-content .about-text-1 {
     grid-area: text1; }
   .about-content .about-picture-1 {
@@ -328,7 +380,7 @@ main .fixed-left-side {
         min-height: 35vh;
         max-height: 35vh;
         padding: 0;
-        background-color: #444;
+        background-color: #2D3033;
         width: 100%;
         background-position: center;
         background-size: cover;
@@ -345,13 +397,13 @@ main .fixed-left-side {
         grid-area: intro;
         padding: 0.5rem; }
         .blog-gridlayout .blog-entries .blog-entry article .blog-description {
-          color: #cc8800; }
+          color: #AA4B41; }
   .blog-gridlayout .sidebar {
     grid-area: sidebar; }
     .blog-gridlayout .sidebar h3 {
       font-style: italic;
       text-align: center;
-      color: #ffcc66;
+      color: #AA4B41;
       padding: 0.5rem; }
   .blog-gridlayout .blogpost {
     grid-area: post; }
@@ -370,7 +422,7 @@ main .fixed-left-side {
       .blog-gridlayout .blogpost .img-box-lg .blog-heading {
         padding: 1rem;
         text-align: center;
-        background: rgba(73, 73, 73, 0.5); }
+        background: rgba(50, 53, 56, 0.5); }
     .blog-gridlayout .blogpost .full-text {
       background: white;
       border-bottom-right-radius: 5px;
@@ -382,7 +434,7 @@ main .fixed-left-side {
   background-size: cover;
   padding: 1rem;
   margin-bottom: 1rem;
-  color: white;
+  color: #f2f5f6;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -390,8 +442,12 @@ main .fixed-left-side {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   opacity: 0.8;
   transition: all 0.5s ease-out; }
+  .other-posts-sections h4 {
+    font-size: 1.3rem;
+    font-weight: 500; }
   .other-posts-sections:hover {
     opacity: 1; }
 
 .gallery {
-  min-height: 100vh; }
+  min-height: 100vh;
+  color: grey; }

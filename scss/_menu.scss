@@ -10,7 +10,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: $forth-color;
+    background: $box-background-color;
     @include easeOut;
   }
   // Rotate into x with menu lines
@@ -108,7 +108,7 @@
     font-weight: 300;
     text-transform: uppercase;
     padding: 0.8rem;
-    color: $text-color-light;
+    color: $font-color-light;
     text-decoration: none;
     @include easeOut;
     &.current{
