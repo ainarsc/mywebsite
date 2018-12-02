@@ -4,12 +4,17 @@
   "description": "Responsive personal travel and photography website",
   "main": "index.js",
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "sass": "node-sass -w scss/ -o dist/css/ --recursive"
   },
   "author": "Ainars Ciesa",
   "license": "ISC",
+  "homepage": "https://pythondoge.github.io/mywebsite",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.10.0",
     "readmore-js": "^2.2.1"
-  }
+  },
+  "devDependencies": {},
+  "keywords": []
 }

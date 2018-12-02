@@ -119,28 +119,28 @@ come in seperatly **/
     transform: translate3d(100%, 0, 0); } }
 
 .japan {
-  background: url(/../dist/img_files/japan.jpg); }
+  background: url(../img_files/japan.jpg); }
 
 .india {
-  background: url(/../dist/img_files/india.jpg); }
+  background: url(../img_files/india.jpg); }
 
 .australia {
-  background: url(/../dist/img_files/australia.jpg); }
+  background: url(../img_files/australia.jpg); }
 
 .newzealand {
-  background: url(/../dist/img_files/newzealand.jpg); }
+  background: url(../img_files/newzealand.jpg); }
 
 .southkorea {
-  background: url(/../dist/img_files/southkorea.jpg); }
+  background: url(../img_files/southkorea.jpg); }
 
 .nepal {
-  background: url(/../dist/img_files/nepal.jpg); }
+  background: url(../img_files/nepal.jpg); }
 
 .vietnam {
-  background: url(/../dist/img_files/vietnam.jpg); }
+  background: url(../img_files/vietnam.jpg); }
 
 .iceland {
-  background: url(/../dist/img_files/iceland.jpg); }
+  background: url(../img_files/iceland.jpg); }
 
 * {
   box-sizing: border-box; }
@@ -154,7 +154,7 @@ body {
   line-height: 1.2;
   font-family: "Raleway", sans-serif; }
   body#bg-img {
-    background: url(/../dist/img_files/DSC01071.jpg);
+    background: url(../img_files/DSC01071.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
