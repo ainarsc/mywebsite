@@ -1,0 +1,453 @@
+/** It looks at #bg-img class in the
+body because I included backgound mixin in the body styling
+The following could be set up in the body or other way, but this is
+showing SASS convention**/
+/** These mixins will be imported in different file where
+the resizible content will be styled. The styles don't go here
+as this just specifies the screen sizes **/
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.5s ease-out; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: white;
+    transition: all 0.5s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px); }
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menu-nav, .menu-branding {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden; }
+  .menu-nav {
+    margin: 0;
+    padding: 0;
+    background: #212325;
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.5s ease-out; }
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-branding {
+    background: #2D3033;
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.5s ease-out; }
+    .menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu .nav-items {
+    transform: translate3d(600px, 0, 0);
+    transition: all 0.5s ease-out; }
+    .menu .nav-items.show {
+      transform: translate3d(0, 0, 0); }
+  .menu .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 0.8rem;
+    color: #f2f5f6;
+    text-decoration: none;
+    transition: all 0.5s ease-out; }
+    .menu .nav-link.current {
+      color: #AA4B41; }
+    .menu .nav-link:hover {
+      color: #AA4B41; }
+
+/**or loop same as in java (i = 0; x<y; i++),
+Each x is being multiplied to make each line
+come in seperatly **/
+.nav-items:nth-child(1) {
+  transition-delay: 0.1s; }
+
+.nav-items:nth-child(2) {
+  transition-delay: 0.2s; }
+
+.nav-items:nth-child(3) {
+  transition-delay: 0.3s; }
+
+.nav-items:nth-child(4) {
+  transition-delay: 0.4s; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; }
+  .menu .nav-link {
+    font-size: 15px; }
+  .menu-nav,
+  .menu-branding {
+    float: none;
+    min-height: 0;
+    width: 100%; }
+  .menu-branding {
+    height: 35vh;
+    transform: translate3d(-100%, 0, 0); }
+  .menu-nav {
+    height: 65vh;
+    transform: translate3d(100%, 0, 0); } }
+
+.japan {
+  background: url(/../dist/img_files/japan.jpg); }
+
+.india {
+  background: url(/../dist/img_files/india.jpg); }
+
+.australia {
+  background: url(/../dist/img_files/australia.jpg); }
+
+.newzealand {
+  background: url(/../dist/img_files/newzealand.jpg); }
+
+.southkorea {
+  background: url(/../dist/img_files/southkorea.jpg); }
+
+.nepal {
+  background: url(/../dist/img_files/nepal.jpg); }
+
+.vietnam {
+  background: url(/../dist/img_files/vietnam.jpg); }
+
+.iceland {
+  background: url(/../dist/img_files/iceland.jpg); }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  /** checks the variable thats set to true/false at the global scope **/
+  background: #f9f9fa;
+  color: #335252;
+  height: 100%;
+  margin: 0;
+  line-height: 1.2;
+  font-family: "Raleway", sans-serif; }
+  body#bg-img {
+    background: url(/../dist/img_files/DSC01071.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-img:after {
+      /** after effect, has to include content **/
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(45, 48, 51, 0.5); }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-weight: 100; }
+  h1.home-lg-heading,
+  h2.home-lg-heading,
+  h3.home-lg-heading,
+  h4.home-lg-heading,
+  h5.home-lg-heading {
+    font-size: 5rem;
+    color: #f2f5f6; }
+  h1.home-sm-heading,
+  h2.home-sm-heading,
+  h3.home-sm-heading,
+  h4.home-sm-heading,
+  h5.home-sm-heading {
+    color: #f2f5f6;
+    margin-bottom: 1rem;
+    padding: 0.2rem; }
+    h1.home-sm-heading .highlightH2,
+    h2.home-sm-heading .highlightH2,
+    h3.home-sm-heading .highlightH2,
+    h4.home-sm-heading .highlightH2,
+    h5.home-sm-heading .highlightH2 {
+      padding: 0.2rem;
+      background: rgba(50, 53, 56, 0.5); }
+  h1.font-weight-6x,
+  h2.font-weight-6x,
+  h3.font-weight-6x,
+  h4.font-weight-6x,
+  h5.font-weight-6x {
+    font-weight: 600; }
+  h1.font-weight-4x,
+  h2.font-weight-4x,
+  h3.font-weight-4x,
+  h4.font-weight-4x,
+  h5.font-weight-4x {
+    font-weight: 400; }
+  h1.font-weight-2x,
+  h2.font-weight-2x,
+  h3.font-weight-2x,
+  h4.font-weight-2x,
+  h5.font-weight-2x {
+    font-weight: 200; }
+  h1.heading-font-size-lg,
+  h2.heading-font-size-lg,
+  h3.heading-font-size-lg,
+  h4.heading-font-size-lg,
+  h5.heading-font-size-lg {
+    font-size: 4rem; }
+  h1.heading-font-size-xlg,
+  h2.heading-font-size-xlg,
+  h3.heading-font-size-xlg,
+  h4.heading-font-size-xlg,
+  h5.heading-font-size-xlg {
+    font-size: 5rem; }
+  h1.heading-font-size-md,
+  h2.heading-font-size-md,
+  h3.heading-font-size-md,
+  h4.heading-font-size-md,
+  h5.heading-font-size-md {
+    font-size: 2rem; }
+  h1.heading-font-size-sm,
+  h2.heading-font-size-sm,
+  h3.heading-font-size-sm,
+  h4.heading-font-size-sm,
+  h5.heading-font-size-sm {
+    font-size: 1.2rem; }
+  h1.heading-center,
+  h2.heading-center,
+  h3.heading-center,
+  h4.heading-center,
+  h5.heading-center {
+    text-align: center; }
+  h1.heading-white,
+  h2.heading-white,
+  h3.heading-white,
+  h4.heading-white,
+  h5.heading-white {
+    color: #f2f5f6; }
+
+p {
+  text-align: justify;
+  line-height: 1.6;
+  padding: 0.5rem; }
+
+a {
+  color: #f2f5f6;
+  text-decoration: none; }
+  a.blog-title-link {
+    color: #335252;
+    text-decoration: none; }
+
+.text-secondary {
+  color: #AA4B41; }
+
+.extra-padding-top {
+  padding-top: 1rem; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+main#home {
+  padding: 4em;
+  overflow: hidden;
+  height: 100vh; }
+  main#home h1 {
+    margin-top: 20vh; }
+
+main#page-content {
+  padding-bottom: 2rem;
+  padding-top: 6rem;
+  margin-left: 12rem;
+  margin-right: 12rem; }
+
+main .icons {
+  margin-top: 1rem;
+  /** icon links **/ }
+  main .icons a {
+    padding: 0.5rem;
+    /** SCSS syntax **/ }
+    main .icons a:hover {
+      color: #AA4B41;
+      transition: all 0.5s ease-out;
+      /** SASS syntax **/
+      /** One way of using this, better way to use mixins **/
+      /** transition: all 0.5s ease-out; **/ }
+
+main .fixed-left-side {
+  position: fixed;
+  top: 31vh;
+  left: 0; }
+  main .fixed-left-side a {
+    display: block;
+    color: #2D3033; }
+
+#page-theme header {
+  background-color: #2D3033; }
+  #page-theme header h2 {
+    font-size: 2rem;
+    font-weight: normal;
+    padding: 1.5rem;
+    color: #f2f5f6; }
+
+#page-theme footer {
+  text-align: center;
+  background-color: #2D3033;
+  padding: 0.5rem;
+  font-weight: 100;
+  font-size: 0.8rem;
+  color: #d4dde1; }
+
+#page-theme h1.page-heading {
+  margin-bottom: 0.5rem; }
+
+#page-theme p {
+  margin: 0;
+  text-align: justify;
+  font-weight: 100; }
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  grid-row-gap: 1rem;
+  grid-template-areas: 'pic1 text1' 'text2 pic2'; }
+  .about-content img {
+    width: 100%;
+    margin: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px; }
+  .about-content .about-text-1 {
+    grid-area: text1; }
+  .about-content .about-picture-1 {
+    grid-area: pic1; }
+  .about-content .about-text-2 {
+    grid-area: text2; }
+  .about-content .about-picture-2 {
+    grid-area: pic2; }
+
+.blog-gridlayout {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 2rem;
+  margin-bottom: 1rem;
+  grid-template-areas: 'post sidebar'; }
+  .blog-gridlayout .blog-entries {
+    grid-area: post; }
+    .blog-gridlayout .blog-entries .blog-entry {
+      display: grid;
+      grid-template-columns: 1.5fr 3fr;
+      grid-template-areas: 'picture intro';
+      background-color: white;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      transition: all 0.5s ease-out;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px; }
+      .blog-gridlayout .blog-entries .blog-entry .img-box-sm {
+        grid-area: picture;
+        min-height: 35vh;
+        max-height: 35vh;
+        padding: 0;
+        background-color: #2D3033;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px; }
+      .blog-gridlayout .blog-entries .blog-entry:hover {
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05); }
+      .blog-gridlayout .blog-entries .blog-entry article {
+        max-height: 35vh;
+        grid-area: intro;
+        padding: 0.5rem; }
+        .blog-gridlayout .blog-entries .blog-entry article .blog-description {
+          color: #AA4B41; }
+  .blog-gridlayout .sidebar {
+    grid-area: sidebar; }
+    .blog-gridlayout .sidebar h3 {
+      font-style: italic;
+      text-align: center;
+      color: #AA4B41;
+      padding: 0.5rem; }
+  .blog-gridlayout .blogpost {
+    grid-area: post; }
+    .blog-gridlayout .blogpost .img-box-lg {
+      width: 100%;
+      min-height: 50vh;
+      max-height: 70vh;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0.8;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px; }
+      .blog-gridlayout .blogpost .img-box-lg .empty-space {
+        min-height: 20vh; }
+      .blog-gridlayout .blogpost .img-box-lg .blog-heading {
+        padding: 1rem;
+        text-align: center;
+        background: rgba(50, 53, 56, 0.5); }
+    .blog-gridlayout .blogpost .full-text {
+      background: white;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px; }
+
+.other-posts-sections {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: #f2f5f6;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  opacity: 0.8;
+  transition: all 0.5s ease-out; }
+  .other-posts-sections h4 {
+    font-size: 1.3rem;
+    font-weight: 500; }
+  .other-posts-sections:hover {
+    opacity: 1; }
+
+.gallery {
+  min-height: 100vh;
+  color: grey; }
