@@ -2,6 +2,7 @@
 @import 'menu';
 @import 'responsive';
 @import 'blogconfig';
+@import 'thumbnails';
 // General styling
 * {
   box-sizing: border-box;
@@ -323,13 +324,53 @@ main {
   @include fade;
   @include easeOut;
 }
-// PORTFOLIO MAIN Page
-.gallery {
-  p{
-    padding-left: 50vh;
-    padding-top: 25vh;
-    font-size: 4rem;
+
+// PORTFOLIO MAIN PAGE
+
+.gallery-layout{
+  //min-height: 100vh;
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  grid: 150px;
+
+
+  .thumbnail{
+    background-position: center;
+    background-size: cover;
+    background-color: $box-background-color;
+    .gallery-title{
+      width: 100%;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+      text-align: center;
+      color: $font-color-light;
+      h2{
+        background: rgba(lighten($primary-color, 2), 0.5);
+      }
+    }
+
+    @include shadow;
+    @include round-corners;
+    @include easeOut;
+    @include grow;
+    @include fade;
   }
-  min-height: 100vh;
-  color: grey;
+}
+
+.prev-page-button{
+  width: 100%;
+  padding-top: 1rem;
+  padding-left: 50%;
+  a{
+    color: $font-color-dark;
+    font-weight: 300;
+    padding: 0;
+    font-size: 1.2rem;
+    &:hover{
+      color: $font-color-light;
+      background: rgba(lighten($primary-color, 2), 0.5);
+    }
+  }
 }
