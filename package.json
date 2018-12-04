@@ -12,6 +12,7 @@
   "homepage": "https://pythondoge.github.io/mywebsite",
   "dependencies": {
     "gh-pages": "^2.0.1",
+    "jquery": "^3.3.1",
     "node-sass": "^4.10.0",
     "readmore-js": "^2.2.1"
   },
