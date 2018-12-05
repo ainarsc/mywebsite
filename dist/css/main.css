@@ -529,9 +529,8 @@ main .fixed-left-side {
 .gallery-layout {
   padding-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1rem;
-  grid: 150px; }
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 1rem; }
   .gallery-layout .thumbnail {
     background-position: center;
     background-size: cover;
@@ -574,26 +573,34 @@ main .fixed-left-side {
       background: rgba(170, 75, 65, 0.8);
       transition: all 0.5s ease-out; }
 
+.main-height {
+  min-height: calc(100vh - 60px); }
+
 .photo-layout {
   padding-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 0.5rem;
-  padding: 0; }
-  .photo-layout .photo img {
-    width: 100%;
-    object-fit: cover;
-    padding: 0;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    transition: all 0.5s ease-out;
-    opacity: 0.8; }
-    .photo-layout .photo img:hover {
-      -webkit-transform: scale(1.05);
-      -ms-transform: scale(1.05);
-      transform: scale(1.05); }
-    .photo-layout .photo img:hover {
-      opacity: 1; }
+  padding: 0;
+  grid: 150px; }
+  .photo-layout .photo {
+    min-width: 5rem; }
+    .photo-layout .photo img {
+      object-fit: cover;
+      width: 100%;
+      padding: 0;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      transition: all 0.5s ease-out;
+      opacity: 0.8; }
+      .photo-layout .photo img:hover {
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05); }
+      .photo-layout .photo img:hover {
+        opacity: 1; }
+  .photo-layout .vertical-img {
+    grid-row-end: span 2; }

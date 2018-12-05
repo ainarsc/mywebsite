@@ -331,9 +331,10 @@ main {
   //min-height: 100vh;
   padding-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  //grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
-  grid: 150px;
+  //grid: 150px;
   .thumbnail{
     background-position: center;
     background-size: cover;
@@ -375,20 +376,23 @@ main {
     }
   }
 }
-
+.main-height{
+  min-height: calc(100vh - 60px);
+}
 // IN GALLERY PHOTO LAYOUT
 .photo-layout{
   //min-height: 100vh;
   padding-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 0.5rem;
   padding: 0;
-  //grid: 150px;
+  grid: 150px;
   .photo{
-    img{
-      width: 100%;
+    min-width: 5rem;
+      img{
       object-fit: cover;
+      width: 100%;
       padding: 0;
       @include shadow;
       @include round-corners;
@@ -396,5 +400,8 @@ main {
       @include grow;
       @include fade;
     }
+  }
+  .vertical-img{
+    grid-row-end: span 2;
   }
 }
