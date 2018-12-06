@@ -123,6 +123,7 @@ main {
   &#page-content {
     padding-bottom: 2rem;
     padding-top: 6rem;
+    min-height: 100vh;
     @include sidemargins;
   }
   // Social Media Icons
@@ -328,11 +329,10 @@ main {
 // PORTFOLIO MAIN PAGE
 
 .gallery-layout{
-  //min-height: 100vh;
+
   padding-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  //grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 1rem;
   //grid: 150px;
   .thumbnail{
@@ -347,6 +347,11 @@ main {
       color: $font-color-light;
       h2{
         background: rgba(lighten($primary-color, 2), 0.5);
+        //min-height: 4rem;
+      }
+      .lower-heading{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
       }
     }
 
@@ -387,7 +392,7 @@ main {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 0.5rem;
   padding: 0;
-  grid: 150px;
+  //grid: 150px;
   .photo{
     min-width: 5rem;
       img{
