@@ -363,6 +363,7 @@ main#home {
 main#page-content {
   padding-bottom: 2rem;
   padding-top: 6rem;
+  min-height: 100vh;
   margin-left: 12rem;
   margin-right: 12rem; }
 
@@ -529,7 +530,7 @@ main .fixed-left-side {
 .gallery-layout {
   padding-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 1rem; }
   .gallery-layout .thumbnail {
     background-position: center;
@@ -550,6 +551,9 @@ main .fixed-left-side {
       color: #f2f5f6; }
       .gallery-layout .thumbnail .gallery-title h2 {
         background: rgba(50, 53, 56, 0.5); }
+      .gallery-layout .thumbnail .gallery-title .lower-heading {
+        padding-top: 1rem;
+        padding-bottom: 1rem; }
     .gallery-layout .thumbnail:hover {
       -webkit-transform: scale(1.05);
       -ms-transform: scale(1.05);
@@ -581,8 +585,7 @@ main .fixed-left-side {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 0.5rem;
-  padding: 0;
-  grid: 150px; }
+  padding: 0; }
   .photo-layout .photo {
     min-width: 5rem; }
     .photo-layout .photo img {
