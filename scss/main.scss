@@ -76,6 +76,9 @@ h5 {
   &.heading-white {
     color: $font-color-light;
   }
+  &.no-side-padding{
+    padding-left: 0;
+  }
 }
 
 p {
@@ -101,8 +104,16 @@ a {
 
 .extra-padding-top {
   padding-top: 1rem;
+  @include smScreen{
+    padding-top: 0;
+  }
 }
-
+.truncate {
+  width: 250px;
+  //white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 header {
   position: fixed;
   z-index: 2;
@@ -125,6 +136,14 @@ main {
     padding-top: 6rem;
     min-height: 100vh;
     @include sidemargins;
+    @include smScreen{
+      margin-left: 1rem;
+      margin-right: 1rem;
+      padding-top: 8.5rem;
+    }
+    @include smScreen{
+      font-size: 0.8rem;
+    }
   }
   // Social Media Icons
   .icons {
@@ -152,6 +171,16 @@ main {
       display: block;
       color: $primary-color;
     }
+    @include smScreen{
+      position: absolute;
+      top: 4rem;
+      left: 31%;
+      font-size: 0.8rem;
+      a{
+        display: inline-block;
+
+      }
+    }
   }
 }
 // Page theme
@@ -166,9 +195,11 @@ main {
       font-weight: normal;
       padding: 1.5rem;
       color: $font-color-light;
+
     }
   }
   footer{
+    //width: 100%;
     text-align: center;
     background-color: $primary-color;
     padding: 0.5rem;
@@ -191,33 +222,37 @@ main {
 }
 
 .about-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
-  grid-row-gap: 1rem;
-  grid-template-areas:
-  'pic1 text1'
-  'text2 pic2';
-  img {
-    width: 100%;
-    margin: auto;
+
+  .about-me {
+    background-color: $box-background-color;
     @include round-corners;
-  }
+    img{
+      width: 50vh;
+      @include smScreen{
+        width: 25vh;
+      }
+      &.img1{
+        float: left;
+        padding-top: 0.5rem;
+        padding-right: 0.8rem;
+        //padding-bottom: 0.5rem;
+      }
+      &.img2{
+        float: right;
+        padding-left: 0.5rem;
+        padding-top: 0.5rem;
+      }
+    }
+    p{
+      &.row{
+        padding: 0.5;
+      }
+      padding-top: 0;
+    }
 
-  .about-text-1 {
-    grid-area: text1;
-  }
-
-  .about-picture-1 {
-    grid-area: pic1;
-  }
-
-  .about-text-2 {
-    grid-area: text2;
-  }
-
-  .about-picture-2 {
-    grid-area: pic2;
+    @include smScreen{
+      //display: block;
+    }
   }
 }
 
@@ -227,14 +262,23 @@ main {
   grid-gap: 2rem;
   margin-bottom: 1rem;
   grid-template-areas: 'post sidebar';
+
+  @include smScreen{
+    grid-template-columns: 100%;
+  }
   .blog-entries {
     grid-area: post;
-
     .blog-entry {
       display: grid;
       grid-template-columns: 1.5fr 3fr;
       grid-template-areas: 'picture intro';
-
+      @include smScreen{
+        grid-template-columns: 1.5fr 2fr;
+      }
+      .blog-article{
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
       .img-box-sm {
         grid-area: picture;
         min-height: 35vh;
@@ -248,6 +292,9 @@ main {
         opacity: 0.8;
         border-top-left-radius: $box-corner-radius;
         border-bottom-left-radius: $box-corner-radius;
+        @include smScreen{
+          min-height: 25vh;
+        }
       }
       background-color: $box-background-color;
       margin-bottom: 1rem;
@@ -256,25 +303,38 @@ main {
       @include easeOut;
       @include round-corners;
 
-      article {
+
+      article{
         max-height: 35vh;
         grid-area: intro;
+        text-align: justify;
+        overflow: hidden;
+        text-overflow: ellipsis;
         .blog-description {
           color: $font-color-alternative;
         }
-        padding: 0.5rem;
+
+        padding: 0.6rem;
+        @include smScreen{
+          min-height: 25vh;
+          max-height: 25vh;
+        }
       }
     }
   }
   .sidebar {
     grid-area: sidebar;
     //max-height: 50vh;
+    @include smScreen{
+      display: none;
+    }
     h3 {
       font-style: italic;
       text-align: center;
       color: $secondary-color;
       padding: 0.5rem;
     }
+
   }
 
   .blogpost {
@@ -334,6 +394,9 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 1rem;
+  @include smScreen{
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
   //grid: 150px;
   .thumbnail{
     background-position: center;
@@ -380,6 +443,9 @@ main {
       @include easeOut;
     }
   }
+  @include smScreen{
+    padding-left: 2%;
+  }
 }
 .main-height{
   min-height: calc(100vh - 60px);
@@ -392,6 +458,9 @@ main {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 0.5rem;
   padding: 0;
+  @include smScreen{
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  }
   //grid: 150px;
   .photo{
     min-width: 5rem;
@@ -405,6 +474,7 @@ main {
       @include grow;
       @include fade;
     }
+
   }
   .vertical-img{
     grid-row-end: span 2;

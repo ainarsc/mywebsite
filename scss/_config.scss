@@ -70,11 +70,7 @@ showing SASS convention**/
     transform: scale(1.05);
   }
 }
-// mixins for CSS media queries
 
-/** These mixins will be imported in different file where
-the resizible content will be styled. The styles don't go here
-as this just specifies the screen sizes **/
 
 // Media query that takes affect on screens 500>=
 @mixin smScreen{

@@ -2,9 +2,6 @@
 body because I included backgound mixin in the body styling
 The following could be set up in the body or other way, but this is
 showing SASS convention**/
-/** These mixins will be imported in different file where
-the resizible content will be styled. The styles don't go here
-as this just specifies the screen sizes **/
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -329,6 +326,12 @@ h5 {
   h4.heading-white,
   h5.heading-white {
     color: #f2f5f6; }
+  h1.no-side-padding,
+  h2.no-side-padding,
+  h3.no-side-padding,
+  h4.no-side-padding,
+  h5.no-side-padding {
+    padding-left: 0; }
 
 p {
   text-align: justify;
@@ -347,6 +350,14 @@ a {
 
 .extra-padding-top {
   padding-top: 1rem; }
+  @media screen and (max-width: 500px) {
+    .extra-padding-top {
+      padding-top: 0; } }
+
+.truncate {
+  width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis; }
 
 header {
   position: fixed;
@@ -366,6 +377,14 @@ main#page-content {
   min-height: 100vh;
   margin-left: 12rem;
   margin-right: 12rem; }
+  @media screen and (max-width: 500px) {
+    main#page-content {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      padding-top: 8.5rem; } }
+  @media screen and (max-width: 500px) {
+    main#page-content {
+      font-size: 0.8rem; } }
 
 main .icons {
   margin-top: 1rem;
@@ -387,6 +406,14 @@ main .fixed-left-side {
   main .fixed-left-side a {
     display: block;
     color: #2D3033; }
+  @media screen and (max-width: 500px) {
+    main .fixed-left-side {
+      position: absolute;
+      top: 4rem;
+      left: 31%;
+      font-size: 0.8rem; }
+      main .fixed-left-side a {
+        display: inline-block; } }
 
 #page-theme header {
   background-color: #2D3033; }
@@ -412,27 +439,29 @@ main .fixed-left-side {
   text-align: justify;
   font-weight: 100; }
 
-.about-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
-  grid-row-gap: 1rem;
-  grid-template-areas: 'pic1 text1' 'text2 pic2'; }
-  .about-content img {
-    width: 100%;
-    margin: auto;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px; }
-  .about-content .about-text-1 {
-    grid-area: text1; }
-  .about-content .about-picture-1 {
-    grid-area: pic1; }
-  .about-content .about-text-2 {
-    grid-area: text2; }
-  .about-content .about-picture-2 {
-    grid-area: pic2; }
+.about-content .about-me {
+  background-color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px; }
+  .about-content .about-me img {
+    width: 50vh; }
+    @media screen and (max-width: 500px) {
+      .about-content .about-me img {
+        width: 25vh; } }
+    .about-content .about-me img.img1 {
+      float: left;
+      padding-top: 0.5rem;
+      padding-right: 0.8rem; }
+    .about-content .about-me img.img2 {
+      float: right;
+      padding-left: 0.5rem;
+      padding-top: 0.5rem; }
+  .about-content .about-me p {
+    padding-top: 0; }
+    .about-content .about-me p.row {
+      padding: 0.5; }
 
 .blog-gridlayout {
   display: grid;
@@ -440,6 +469,9 @@ main .fixed-left-side {
   grid-gap: 2rem;
   margin-bottom: 1rem;
   grid-template-areas: 'post sidebar'; }
+  @media screen and (max-width: 500px) {
+    .blog-gridlayout {
+      grid-template-columns: 100%; } }
   .blog-gridlayout .blog-entries {
     grid-area: post; }
     .blog-gridlayout .blog-entries .blog-entry {
@@ -454,6 +486,12 @@ main .fixed-left-side {
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
       border-bottom-left-radius: 5px; }
+      @media screen and (max-width: 500px) {
+        .blog-gridlayout .blog-entries .blog-entry {
+          grid-template-columns: 1.5fr 2fr; } }
+      .blog-gridlayout .blog-entries .blog-entry .blog-article {
+        overflow: hidden;
+        text-overflow: ellipsis; }
       .blog-gridlayout .blog-entries .blog-entry .img-box-sm {
         grid-area: picture;
         min-height: 35vh;
@@ -467,6 +505,9 @@ main .fixed-left-side {
         opacity: 0.8;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px; }
+        @media screen and (max-width: 500px) {
+          .blog-gridlayout .blog-entries .blog-entry .img-box-sm {
+            min-height: 25vh; } }
       .blog-gridlayout .blog-entries .blog-entry:hover {
         -webkit-transform: scale(1.05);
         -ms-transform: scale(1.05);
@@ -474,11 +515,21 @@ main .fixed-left-side {
       .blog-gridlayout .blog-entries .blog-entry article {
         max-height: 35vh;
         grid-area: intro;
-        padding: 0.5rem; }
+        text-align: justify;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0.6rem; }
         .blog-gridlayout .blog-entries .blog-entry article .blog-description {
           color: #AA4B41; }
+        @media screen and (max-width: 500px) {
+          .blog-gridlayout .blog-entries .blog-entry article {
+            min-height: 25vh;
+            max-height: 25vh; } }
   .blog-gridlayout .sidebar {
     grid-area: sidebar; }
+    @media screen and (max-width: 500px) {
+      .blog-gridlayout .sidebar {
+        display: none; } }
     .blog-gridlayout .sidebar h3 {
       font-style: italic;
       text-align: center;
@@ -532,6 +583,9 @@ main .fixed-left-side {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 1rem; }
+  @media screen and (max-width: 500px) {
+    .gallery-layout {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); } }
   .gallery-layout .thumbnail {
     background-position: center;
     background-size: cover;
@@ -576,6 +630,9 @@ main .fixed-left-side {
       color: #f2f5f6;
       background: rgba(170, 75, 65, 0.8);
       transition: all 0.5s ease-out; }
+  @media screen and (max-width: 500px) {
+    .prev-page-button {
+      padding-left: 2%; } }
 
 .main-height {
   min-height: calc(100vh - 60px); }
@@ -586,6 +643,9 @@ main .fixed-left-side {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 0.5rem;
   padding: 0; }
+  @media screen and (max-width: 500px) {
+    .photo-layout {
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); } }
   .photo-layout .photo {
     min-width: 5rem; }
     .photo-layout .photo img {
