@@ -243,6 +243,30 @@ body {
       z-index: -1;
       background: rgba(45, 48, 51, 0.5); }
 
+#page-layout header {
+  background-color: #2D3033;
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+  #page-layout header h2 {
+    font-size: 2rem;
+    font-weight: normal;
+    padding: 1.5rem;
+    color: #f2f5f6; }
+
+#page-layout footer {
+  text-align: center;
+  background-color: #2D3033;
+  padding: 0.5rem;
+  font-weight: 100;
+  font-size: 0.8rem;
+  color: #d4dde1; }
+
+#page-layout p {
+  margin: 0;
+  text-align: justify;
+  font-weight: 100; }
+
 h1,
 h2,
 h3,
@@ -272,6 +296,12 @@ h5 {
     h5.home-sm-heading .highlightH2 {
       padding: 0.2rem;
       background: rgba(50, 53, 56, 0.5); }
+  h1.page-heading,
+  h2.page-heading,
+  h3.page-heading,
+  h4.page-heading,
+  h5.page-heading {
+    margin-bottom: 0.5rem; }
   h1.font-weight-6x,
   h2.font-weight-6x,
   h3.font-weight-6x,
@@ -359,10 +389,35 @@ a {
   overflow: hidden;
   text-overflow: ellipsis; }
 
-header {
-  position: fixed;
-  z-index: 2;
-  width: 100%; }
+.round-buttom-corners {
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px; }
+
+.box-color {
+  background: white; }
+
+.prev-page-button {
+  width: 100%;
+  padding-top: 1.3rem;
+  padding-left: calc(50% - 22px); }
+  .prev-page-button a {
+    color: #335252;
+    text-align: center;
+    font-weight: 300;
+    padding-bottom: 0.2rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    font-size: 1.5rem; }
+    .prev-page-button a:hover {
+      color: #f2f5f6;
+      background: rgba(170, 75, 65, 0.8);
+      transition: all 0.5s ease-out; }
+  @media screen and (max-width: 500px) {
+    .prev-page-button {
+      padding-left: 2%; } }
+  @media screen and (max-width: 768px) {
+    .prev-page-button {
+      padding-left: 0; } }
 
 main#home {
   padding: 4em;
@@ -377,14 +432,20 @@ main#page-content {
   min-height: 100vh;
   margin-left: 12rem;
   margin-right: 12rem; }
+  @media screen and (max-width: 768px) {
+    main#page-content {
+      margin-left: 4rem;
+      margin-right: 4rem; } }
   @media screen and (max-width: 500px) {
     main#page-content {
       margin-left: 1rem;
       margin-right: 1rem;
-      padding-top: 8.5rem; } }
-  @media screen and (max-width: 500px) {
-    main#page-content {
+      padding-top: 8.5rem;
       font-size: 0.8rem; } }
+  @media screen and (min-width: 769px) and (max-width: 1000px) {
+    main#page-content {
+      margin-left: 5rem;
+      margin-right: 5rem; } }
 
 main .icons {
   margin-top: 1rem;
@@ -415,52 +476,28 @@ main .fixed-left-side {
       main .fixed-left-side a {
         display: inline-block; } }
 
-#page-theme header {
-  background-color: #2D3033; }
-  #page-theme header h2 {
-    font-size: 2rem;
-    font-weight: normal;
-    padding: 1.5rem;
-    color: #f2f5f6; }
-
-#page-theme footer {
-  text-align: center;
-  background-color: #2D3033;
-  padding: 0.5rem;
-  font-weight: 100;
-  font-size: 0.8rem;
-  color: #d4dde1; }
-
-#page-theme h1.page-heading {
-  margin-bottom: 0.5rem; }
-
-#page-theme p {
-  margin: 0;
-  text-align: justify;
-  font-weight: 100; }
-
-.about-content .about-me {
+.about-me {
   background-color: white;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px; }
-  .about-content .about-me img {
+  .about-me img {
     width: 50vh; }
     @media screen and (max-width: 500px) {
-      .about-content .about-me img {
+      .about-me img {
         width: 25vh; } }
-    .about-content .about-me img.img1 {
+    .about-me img.img1 {
       float: left;
       padding-top: 0.5rem;
       padding-right: 0.8rem; }
-    .about-content .about-me img.img2 {
+    .about-me img.img2 {
       float: right;
       padding-left: 0.5rem;
       padding-top: 0.5rem; }
-  .about-content .about-me p {
+  .about-me p {
     padding-top: 0; }
-    .about-content .about-me p.row {
+    .about-me p.row {
       padding: 0.5; }
 
 .blog-gridlayout {
@@ -469,7 +506,7 @@ main .fixed-left-side {
   grid-gap: 2rem;
   margin-bottom: 1rem;
   grid-template-areas: 'post sidebar'; }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 768px) {
     .blog-gridlayout {
       grid-template-columns: 100%; } }
   .blog-gridlayout .blog-entries {
@@ -527,14 +564,28 @@ main .fixed-left-side {
             max-height: 25vh; } }
   .blog-gridlayout .sidebar {
     grid-area: sidebar; }
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 768px) {
       .blog-gridlayout .sidebar {
         display: none; } }
-    .blog-gridlayout .sidebar h3 {
-      font-style: italic;
-      text-align: center;
-      color: #AA4B41;
-      padding: 0.5rem; }
+    .blog-gridlayout .sidebar .other-posts-sections {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      color: #f2f5f6;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      opacity: 0.8;
+      transition: all 0.5s ease-out; }
+      .blog-gridlayout .sidebar .other-posts-sections h4 {
+        font-size: 1.3rem;
+        font-weight: 500; }
+      .blog-gridlayout .sidebar .other-posts-sections:hover {
+        opacity: 1; }
   .blog-gridlayout .blogpost {
     grid-area: post; }
     .blog-gridlayout .blogpost .img-box-lg {
@@ -553,39 +604,18 @@ main .fixed-left-side {
         padding: 1rem;
         text-align: center;
         background: rgba(50, 53, 56, 0.5); }
-    .blog-gridlayout .blogpost .full-text {
-      background: white;
-      border-bottom-right-radius: 5px;
-      border-bottom-left-radius: 5px; }
-
-.other-posts-sections {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  color: #f2f5f6;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  opacity: 0.8;
-  transition: all 0.5s ease-out; }
-  .other-posts-sections h4 {
-    font-size: 1.3rem;
-    font-weight: 500; }
-  .other-posts-sections:hover {
-    opacity: 1; }
 
 .gallery-layout {
   padding-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
   grid-gap: 1rem; }
   @media screen and (max-width: 500px) {
     .gallery-layout {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); } }
+      grid-template-columns: repeat(auto-fill, minmax(100px, 2fr)); } }
+  @media screen and (max-width: 768px) {
+    .gallery-layout {
+      grid-template-columns: repeat(auto-fill, minmax(170px, 2fr)); } }
   .gallery-layout .thumbnail {
     background-position: center;
     background-size: cover;
@@ -615,37 +645,15 @@ main .fixed-left-side {
     .gallery-layout .thumbnail:hover {
       opacity: 1; }
 
-.prev-page-button {
-  width: 100%;
-  padding-top: 1.3rem;
-  padding-left: 50%; }
-  .prev-page-button a {
-    color: #335252;
-    font-weight: 300;
-    padding-bottom: 0.2rem;
-    padding-left: 0.2rem;
-    padding-right: 0.2rem;
-    font-size: 1.5rem; }
-    .prev-page-button a:hover {
-      color: #f2f5f6;
-      background: rgba(170, 75, 65, 0.8);
-      transition: all 0.5s ease-out; }
-  @media screen and (max-width: 500px) {
-    .prev-page-button {
-      padding-left: 2%; } }
-
-.main-height {
-  min-height: calc(100vh - 60px); }
-
 .photo-layout {
   padding-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
   grid-gap: 0.5rem;
   padding: 0; }
   @media screen and (max-width: 500px) {
     .photo-layout {
-      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); } }
+      grid-template-columns: repeat(auto-fill, minmax(100px, 2fr)); } }
   .photo-layout .photo {
     min-width: 5rem; }
     .photo-layout .photo img {

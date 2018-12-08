@@ -86,7 +86,7 @@ showing SASS convention**/
 }
 //Takes effect when screen is between 789 and 1170px
 @mixin lgScreen{
-  @media screen and (max-width: 769px) and (max-width: 1170px){
+  @media screen and (min-width: 769px) and (max-width: 1000px){
     @content;
   }
 }
