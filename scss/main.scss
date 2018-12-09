@@ -69,6 +69,7 @@ h5 {
 
     .highlightH2 {
       padding: 0.2rem;
+      line-height: 1.4;
       background: rgba(lighten($primary-color, 2), 0.5);
     }
   }
@@ -135,28 +136,33 @@ a {
 .text-secondary {
   color: $secondary-color;
 }
+
 .extra-padding-top {
   padding-top: 1rem;
   @include smScreen {
     padding-top: 0;
   }
 }
+
 .truncate {
   width: 250px;
   //white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .round-buttom-corners {
   border-bottom-right-radius: $box-corner-radius;
   border-bottom-left-radius: $box-corner-radius;
 }
+
 .box-color {
   background: $box-background-color;
 }
+
 .prev-page-button {
   width: 100%;
-  padding-top: 1.3rem;
+  padding-top: 1.1rem;
   padding-left: calc(50% - 22px);
   a {
     color: $font-color-dark;
@@ -175,10 +181,12 @@ a {
     }
   }
   @include smScreen {
+    padding-bottom: 0.8rem;
     padding-left: 2%;
   }
   @include mdScreen{
     padding-left: 0;
+    padding-bottom: 0.5rem;
   }
 }
 
@@ -202,11 +210,13 @@ main {
     @include mdScreen{
       margin-left: 4rem;
       margin-right: 4rem;
+      padding-bottom: 0rem;
     }
     @include smScreen {
       margin-left: 1rem;
       margin-right: 1rem;
-      padding-top: 8.5rem;
+      padding-top: 6rem;
+      padding-bottom: 0;
       font-size: 0.8rem;
     }
     @include lgScreen{
@@ -240,10 +250,10 @@ main {
       display: block;
       color: $primary-color;
     }
-    @include smScreen {
-      position: absolute;
-      top: 4rem;
-      left: 31%;
+    @include mdScreen {
+      position: static;
+      margin-top: 0;
+      left: 2%;
       font-size: 0.8rem;
 
       a {
@@ -275,12 +285,22 @@ main {
   }
   p {
     &.row {
+      line-height: 1.5;
       padding: 0.5;
     }
     padding-top: 0;
   }
+
   @include smScreen {
-    //display: block;
+    h3{
+      font-size: 1rem;
+      padding-right: 0.5rem;
+    }
+  }
+  @include mdScreen{
+    h3{
+      text-align: left;
+    }
   }
 }
 // BLOG PAGE
@@ -294,18 +314,30 @@ main {
     grid-template-columns: 100%;
   }
   @include mdScreen{
-
+    padding-top: 0.5rem;
+    margin-bottom: 0;
   }
   .blog-entries {
     grid-area: post;
+
     .blog-entry {
       display: grid;
       grid-template-columns: 1.5fr 3fr;
       grid-template-areas: 'picture intro';
       @include smScreen {
+        max-height: 20vh;
+
+      }
+      @include mdScreen{
+        max-height: 35vh;
         grid-template-columns: 1.5fr 2fr;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .blog-article {
+        p{
+          line-height: 1.5;
+        }
         overflow: hidden;
         text-overflow: ellipsis;
       }
@@ -323,7 +355,11 @@ main {
         border-top-left-radius: $box-corner-radius;
         border-bottom-left-radius: $box-corner-radius;
         @include smScreen {
-          min-height: 25vh;
+          min-height: 20vh;
+        }
+        @include mdScreen{
+          min-height: 35vh;
+
         }
       }
       background-color: $box-background-color;
@@ -347,6 +383,12 @@ main {
         @include smScreen {
           min-height: 25vh;
           max-height: 25vh;
+          a{
+            font-size: 1rem;
+          }
+        }
+        @include mdScreen {
+          line-height: 1.2rem;
         }
       }
     }
@@ -377,10 +419,10 @@ main {
     grid-area: post;
     .img-box-lg {
       .empty-space {
-        min-height: 20vh;
+        min-height: 10vh;
       }
       width: 100%;
-      min-height: 50vh;
+      min-height: 20vh;
       max-height: 70vh;
       background-position: center;
       background-size: cover;
@@ -388,7 +430,6 @@ main {
       opacity: 0.8;
       border-top-left-radius: $box-corner-radius;
       border-top-right-radius: $box-corner-radius;
-
       .blog-heading {
         padding: 1rem;
         text-align: center;
@@ -404,13 +445,13 @@ main {
   grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
   grid-gap: 1rem;
   @include smScreen {
+    padding-top: 0.5rem;
     grid-template-columns: repeat(auto-fill, minmax(100px, 2fr));
   }
   @include mdScreen {
-    grid-template-columns: repeat(auto-fill, minmax(170px, 2fr));
+    padding-top: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(145px, 2fr));
   }
-
-  //grid: 150px;
   .thumbnail {
     background-position: center;
     background-size: cover;
@@ -449,7 +490,8 @@ main {
   grid-gap: 0.5rem;
   padding: 0;
   @include smScreen {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 2fr));
+    padding-top: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 2fr));
   }
   //grid: 150px;
   .photo {

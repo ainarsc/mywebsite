@@ -91,7 +91,7 @@ come in seperatly **/
 .nav-items:nth-child(4) {
   transition-delay: 0.4s; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 857px) {
   main {
     align-items: center;
     text-align: center; }
@@ -109,10 +109,10 @@ come in seperatly **/
     min-height: 0;
     width: 100%; }
   .menu-branding {
-    height: 35vh;
+    height: 50vh;
     transform: translate3d(-100%, 0, 0); }
   .menu-nav {
-    height: 65vh;
+    height: 50vh;
     transform: translate3d(100%, 0, 0); } }
 
 .japan {
@@ -295,6 +295,7 @@ h5 {
     h4.home-sm-heading .highlightH2,
     h5.home-sm-heading .highlightH2 {
       padding: 0.2rem;
+      line-height: 1.4;
       background: rgba(50, 53, 56, 0.5); }
   h1.page-heading,
   h2.page-heading,
@@ -398,7 +399,7 @@ a {
 
 .prev-page-button {
   width: 100%;
-  padding-top: 1.3rem;
+  padding-top: 1.1rem;
   padding-left: calc(50% - 22px); }
   .prev-page-button a {
     color: #335252;
@@ -414,10 +415,12 @@ a {
       transition: all 0.5s ease-out; }
   @media screen and (max-width: 500px) {
     .prev-page-button {
+      padding-bottom: 0.8rem;
       padding-left: 2%; } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 857px) {
     .prev-page-button {
-      padding-left: 0; } }
+      padding-left: 0;
+      padding-bottom: 0.5rem; } }
 
 main#home {
   padding: 4em;
@@ -432,17 +435,19 @@ main#page-content {
   min-height: 100vh;
   margin-left: 12rem;
   margin-right: 12rem; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 857px) {
     main#page-content {
       margin-left: 4rem;
-      margin-right: 4rem; } }
+      margin-right: 4rem;
+      padding-bottom: 0rem; } }
   @media screen and (max-width: 500px) {
     main#page-content {
       margin-left: 1rem;
       margin-right: 1rem;
-      padding-top: 8.5rem;
+      padding-top: 6rem;
+      padding-bottom: 0;
       font-size: 0.8rem; } }
-  @media screen and (min-width: 769px) and (max-width: 1000px) {
+  @media screen and (min-width: 858px) and (max-width: 1000px) {
     main#page-content {
       margin-left: 5rem;
       margin-right: 5rem; } }
@@ -467,11 +472,11 @@ main .fixed-left-side {
   main .fixed-left-side a {
     display: block;
     color: #2D3033; }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 857px) {
     main .fixed-left-side {
-      position: absolute;
-      top: 4rem;
-      left: 31%;
+      position: static;
+      margin-top: 0;
+      left: 2%;
       font-size: 0.8rem; }
       main .fixed-left-side a {
         display: inline-block; } }
@@ -498,7 +503,15 @@ main .fixed-left-side {
   .about-me p {
     padding-top: 0; }
     .about-me p.row {
+      line-height: 1.5;
       padding: 0.5; }
+  @media screen and (max-width: 500px) {
+    .about-me h3 {
+      font-size: 1rem;
+      padding-right: 0.5rem; } }
+  @media screen and (max-width: 857px) {
+    .about-me h3 {
+      text-align: left; } }
 
 .blog-gridlayout {
   display: grid;
@@ -506,9 +519,13 @@ main .fixed-left-side {
   grid-gap: 2rem;
   margin-bottom: 1rem;
   grid-template-areas: 'post sidebar'; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 857px) {
     .blog-gridlayout {
       grid-template-columns: 100%; } }
+  @media screen and (max-width: 857px) {
+    .blog-gridlayout {
+      padding-top: 0.5rem;
+      margin-bottom: 0; } }
   .blog-gridlayout .blog-entries {
     grid-area: post; }
     .blog-gridlayout .blog-entries .blog-entry {
@@ -525,10 +542,18 @@ main .fixed-left-side {
       border-bottom-left-radius: 5px; }
       @media screen and (max-width: 500px) {
         .blog-gridlayout .blog-entries .blog-entry {
-          grid-template-columns: 1.5fr 2fr; } }
+          max-height: 20vh; } }
+      @media screen and (max-width: 857px) {
+        .blog-gridlayout .blog-entries .blog-entry {
+          max-height: 35vh;
+          grid-template-columns: 1.5fr 2fr;
+          overflow: hidden;
+          text-overflow: ellipsis; } }
       .blog-gridlayout .blog-entries .blog-entry .blog-article {
         overflow: hidden;
         text-overflow: ellipsis; }
+        .blog-gridlayout .blog-entries .blog-entry .blog-article p {
+          line-height: 1.5; }
       .blog-gridlayout .blog-entries .blog-entry .img-box-sm {
         grid-area: picture;
         min-height: 35vh;
@@ -544,7 +569,10 @@ main .fixed-left-side {
         border-bottom-left-radius: 5px; }
         @media screen and (max-width: 500px) {
           .blog-gridlayout .blog-entries .blog-entry .img-box-sm {
-            min-height: 25vh; } }
+            min-height: 20vh; } }
+        @media screen and (max-width: 857px) {
+          .blog-gridlayout .blog-entries .blog-entry .img-box-sm {
+            min-height: 35vh; } }
       .blog-gridlayout .blog-entries .blog-entry:hover {
         -webkit-transform: scale(1.05);
         -ms-transform: scale(1.05);
@@ -561,10 +589,15 @@ main .fixed-left-side {
         @media screen and (max-width: 500px) {
           .blog-gridlayout .blog-entries .blog-entry article {
             min-height: 25vh;
-            max-height: 25vh; } }
+            max-height: 25vh; }
+            .blog-gridlayout .blog-entries .blog-entry article a {
+              font-size: 1rem; } }
+        @media screen and (max-width: 857px) {
+          .blog-gridlayout .blog-entries .blog-entry article {
+            line-height: 1.2rem; } }
   .blog-gridlayout .sidebar {
     grid-area: sidebar; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 857px) {
       .blog-gridlayout .sidebar {
         display: none; } }
     .blog-gridlayout .sidebar .other-posts-sections {
@@ -590,7 +623,7 @@ main .fixed-left-side {
     grid-area: post; }
     .blog-gridlayout .blogpost .img-box-lg {
       width: 100%;
-      min-height: 50vh;
+      min-height: 20vh;
       max-height: 70vh;
       background-position: center;
       background-size: cover;
@@ -599,7 +632,7 @@ main .fixed-left-side {
       border-top-left-radius: 5px;
       border-top-right-radius: 5px; }
       .blog-gridlayout .blogpost .img-box-lg .empty-space {
-        min-height: 20vh; }
+        min-height: 10vh; }
       .blog-gridlayout .blogpost .img-box-lg .blog-heading {
         padding: 1rem;
         text-align: center;
@@ -612,10 +645,12 @@ main .fixed-left-side {
   grid-gap: 1rem; }
   @media screen and (max-width: 500px) {
     .gallery-layout {
+      padding-top: 0.5rem;
       grid-template-columns: repeat(auto-fill, minmax(100px, 2fr)); } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 857px) {
     .gallery-layout {
-      grid-template-columns: repeat(auto-fill, minmax(170px, 2fr)); } }
+      padding-top: 0.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(145px, 2fr)); } }
   .gallery-layout .thumbnail {
     background-position: center;
     background-size: cover;
@@ -653,7 +688,8 @@ main .fixed-left-side {
   padding: 0; }
   @media screen and (max-width: 500px) {
     .photo-layout {
-      grid-template-columns: repeat(auto-fill, minmax(100px, 2fr)); } }
+      padding-top: 0.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 2fr)); } }
   .photo-layout .photo {
     min-width: 5rem; }
     .photo-layout .photo img {
