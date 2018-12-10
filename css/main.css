@@ -9,12 +9,20 @@ showing SASS convention**/
   top: 35px;
   cursor: pointer;
   transition: all 0.5s ease-out; }
+  @media screen and (min-width: 1920px) {
+    .menu-btn {
+      right: 45px;
+      top: 45px; } }
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
     background: white;
     transition: all 0.5s ease-out; }
+    @media screen and (min-width: 1920px) {
+      .menu-btn .btn-line {
+        width: 35px;
+        height: 4px; } }
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
@@ -91,28 +99,32 @@ come in seperatly **/
 .nav-items:nth-child(4) {
   transition-delay: 0.4s; }
 
-@media screen and (max-width: 857px) {
+@media screen and (min-width: 1920px) {
+  .menu .nav-link {
+    font-size: 2rem; } }
+
+@media screen and (min-width: 701px) and (max-width: 1100px) {
   main {
     align-items: center;
     text-align: center; }
     main .lg-heading {
       line-height: 1; } }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   main#home h1 {
     margin-top: 10vh; }
   .menu .nav-link {
-    font-size: 15px; }
-  .menu-nav,
-  .menu-branding {
+    font-size: 20px; }
+  .menu-branding,
+  .menu-nav {
     float: none;
     min-height: 0;
     width: 100%; }
   .menu-branding {
-    height: 50vh;
+    height: 45vh;
     transform: translate3d(-100%, 0, 0); }
   .menu-nav {
-    height: 50vh;
+    height: 55vh;
     transform: translate3d(100%, 0, 0); } }
 
 .japan {
@@ -229,7 +241,7 @@ body {
   line-height: 1.2;
   font-family: "Raleway", sans-serif; }
   body#bg-img {
-    background: url(../img_files/DSC01071.jpg);
+    background: url("../img_files/DSC01071.jpg");
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
@@ -253,6 +265,9 @@ body {
     font-weight: normal;
     padding: 1.5rem;
     color: #f2f5f6; }
+    @media screen and (min-width: 1920px) {
+      #page-layout header h2 {
+        font-size: 3rem; } }
 
 #page-layout footer {
   text-align: center;
@@ -281,6 +296,13 @@ h5 {
   h5.home-lg-heading {
     font-size: 5rem;
     color: #f2f5f6; }
+    @media screen and (max-width: 700px) {
+      h1.home-lg-heading,
+      h2.home-lg-heading,
+      h3.home-lg-heading,
+      h4.home-lg-heading,
+      h5.home-lg-heading {
+        font-size: 3rem; } }
   h1.home-sm-heading,
   h2.home-sm-heading,
   h3.home-sm-heading,
@@ -295,7 +317,7 @@ h5 {
     h4.home-sm-heading .highlightH2,
     h5.home-sm-heading .highlightH2 {
       padding: 0.2rem;
-      line-height: 1.4;
+      line-height: 1.49;
       background: rgba(50, 53, 56, 0.5); }
   h1.page-heading,
   h2.page-heading,
@@ -381,7 +403,7 @@ a {
 
 .extra-padding-top {
   padding-top: 1rem; }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 700px) {
     .extra-padding-top {
       padding-top: 0; } }
 
@@ -413,14 +435,12 @@ a {
       color: #f2f5f6;
       background: rgba(170, 75, 65, 0.8);
       transition: all 0.5s ease-out; }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 700px) {
     .prev-page-button {
-      padding-bottom: 0.8rem;
-      padding-left: 2%; } }
-  @media screen and (max-width: 857px) {
-    .prev-page-button {
-      padding-left: 0;
-      padding-bottom: 0.5rem; } }
+      padding-bottom: 0.8rem; } }
+
+.text-left {
+  text-align: left; }
 
 main#home {
   padding: 4em;
@@ -428,29 +448,33 @@ main#home {
   height: 100vh; }
   main#home h1 {
     margin-top: 20vh; }
+  @media screen and (max-width: 700px) {
+    main#home {
+      text-align: center; } }
 
 main#page-content {
   padding-bottom: 2rem;
-  padding-top: 6rem;
-  min-height: 100vh;
-  margin-left: 12rem;
-  margin-right: 12rem; }
-  @media screen and (max-width: 857px) {
-    main#page-content {
-      margin-left: 4rem;
-      margin-right: 4rem;
-      padding-bottom: 0rem; } }
-  @media screen and (max-width: 500px) {
+  padding-top: 7rem;
+  min-height: calc(100vh - 46px);
+  margin-left: 12%;
+  margin-right: 12%; }
+  @media screen and (max-width: 700px) {
     main#page-content {
       margin-left: 1rem;
       margin-right: 1rem;
       padding-top: 6rem;
       padding-bottom: 0;
       font-size: 0.8rem; } }
-  @media screen and (min-width: 858px) and (max-width: 1000px) {
+  @media screen and (min-width: 701px) and (max-width: 1100px) {
     main#page-content {
-      margin-left: 5rem;
-      margin-right: 5rem; } }
+      margin-left: 4rem;
+      margin-right: 4rem;
+      text-align: left;
+      padding-bottom: 0.5rem; } }
+  @media screen and (min-width: 1920px) {
+    main#page-content {
+      font-size: 1.5rem;
+      padding-top: 8rem; } }
 
 main .icons {
   margin-top: 1rem;
@@ -467,16 +491,25 @@ main .icons {
 
 main .fixed-left-side {
   position: fixed;
-  top: 31vh;
+  top: calc(50% - 96px);
   left: 0; }
   main .fixed-left-side a {
     display: block;
     color: #2D3033; }
-  @media screen and (max-width: 857px) {
+  @media screen and (min-width: 701px) and (max-width: 1100px) {
     main .fixed-left-side {
       position: static;
       margin-top: 0;
       left: 2%;
+      font-size: 0.8rem;
+      margin-left: calc(50% - 75px); }
+      main .fixed-left-side a {
+        display: inline-block; } }
+  @media screen and (max-width: 700px) {
+    main .fixed-left-side {
+      position: static;
+      margin-top: 0;
+      margin-left: calc(50% - 75px);
       font-size: 0.8rem; }
       main .fixed-left-side a {
         display: inline-block; } }
@@ -487,9 +520,11 @@ main .fixed-left-side {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px; }
+  .about-me h3 {
+    padding-left: 0.5rem; }
   .about-me img {
-    width: 50vh; }
-    @media screen and (max-width: 500px) {
+    max-height: 30vh; }
+    @media screen and (max-width: 700px) {
       .about-me img {
         width: 25vh; } }
     .about-me img.img1 {
@@ -505,33 +540,37 @@ main .fixed-left-side {
     .about-me p.row {
       line-height: 1.5;
       padding: 0.5; }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 700px) {
     .about-me h3 {
       font-size: 1rem;
       padding-right: 0.5rem; } }
-  @media screen and (max-width: 857px) {
+  @media screen and (min-width: 701px) and (max-width: 1100px) {
     .about-me h3 {
       text-align: left; } }
 
 .blog-gridlayout {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2fr 1fr;
   grid-gap: 2rem;
   margin-bottom: 1rem;
   grid-template-areas: 'post sidebar'; }
-  @media screen and (max-width: 857px) {
-    .blog-gridlayout {
-      grid-template-columns: 100%; } }
-  @media screen and (max-width: 857px) {
+  @media screen and (min-width: 701px) and (max-width: 1100px) {
     .blog-gridlayout {
       padding-top: 0.5rem;
       margin-bottom: 0; } }
+  @media screen and (max-width: 700px) {
+    .blog-gridlayout {
+      grid-template-columns: 100%;
+      font-size: 0.8rem; } }
   .blog-gridlayout .blog-entries {
     grid-area: post; }
     .blog-gridlayout .blog-entries .blog-entry {
       display: grid;
-      grid-template-columns: 1.5fr 3fr;
+      grid-template-columns: 2fr 3fr;
       grid-template-areas: 'picture intro';
+      max-height: 35vh;
+      overflow: hidden;
+      text-overflow: ellipsis;
       background-color: white;
       margin-bottom: 1rem;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -540,15 +579,14 @@ main .fixed-left-side {
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
       border-bottom-left-radius: 5px; }
-      @media screen and (max-width: 500px) {
+      @media screen and (min-width: 701px) and (max-width: 1100px) {
         .blog-gridlayout .blog-entries .blog-entry {
-          max-height: 20vh; } }
-      @media screen and (max-width: 857px) {
+          max-height: 28vh;
+          font-size: 1rem; } }
+      @media screen and (max-width: 700px) {
         .blog-gridlayout .blog-entries .blog-entry {
-          max-height: 35vh;
-          grid-template-columns: 1.5fr 2fr;
-          overflow: hidden;
-          text-overflow: ellipsis; } }
+          max-height: 24vh;
+          grid-template-columns: 1fr 2fr; } }
       .blog-gridlayout .blog-entries .blog-entry .blog-article {
         overflow: hidden;
         text-overflow: ellipsis; }
@@ -567,37 +605,53 @@ main .fixed-left-side {
         opacity: 0.8;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px; }
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 700px) {
           .blog-gridlayout .blog-entries .blog-entry .img-box-sm {
-            min-height: 20vh; } }
-        @media screen and (max-width: 857px) {
+            max-width: 30vh;
+            min-width: 23vh; } }
+        @media screen and (min-width: 701px) and (max-width: 1100px) {
           .blog-gridlayout .blog-entries .blog-entry .img-box-sm {
-            min-height: 35vh; } }
+            min-height: 28vh;
+            min-width: 25vh;
+            max-height: 28vh; } }
       .blog-gridlayout .blog-entries .blog-entry:hover {
         -webkit-transform: scale(1.05);
         -ms-transform: scale(1.05);
         transform: scale(1.05); }
       .blog-gridlayout .blog-entries .blog-entry article {
-        max-height: 35vh;
         grid-area: intro;
-        text-align: justify;
         overflow: hidden;
         text-overflow: ellipsis;
-        padding: 0.6rem; }
+        padding: 0.6rem;
+        text-align: left; }
         .blog-gridlayout .blog-entries .blog-entry article .blog-description {
-          color: #AA4B41; }
-        @media screen and (max-width: 500px) {
+          color: #AA4B41;
+          padding-top: 0.5rem;
+          padding-left: 0.5rem; }
+        @media screen and (min-width: 701px) and (max-width: 1100px) {
           .blog-gridlayout .blog-entries .blog-entry article {
-            min-height: 25vh;
-            max-height: 25vh; }
+            line-height: 0.6rem;
+            max-height: 25vh;
+            min-width: 25vh; }
+            .blog-gridlayout .blog-entries .blog-entry article h1 {
+              padding: 0.5rem;
+              font-size: 1.2rem; } }
+        @media screen and (max-width: 700px) {
+          .blog-gridlayout .blog-entries .blog-entry article {
+            max-height: 22vh;
+            min-width: 30vh;
+            line-height: 0.5rem;
+            text-align: left;
+            padding-left: 0; }
+            .blog-gridlayout .blog-entries .blog-entry article h1 {
+              padding-left: 0.5rem;
+              text-align: left;
+              font-size: 0.7rem; }
             .blog-gridlayout .blog-entries .blog-entry article a {
               font-size: 1rem; } }
-        @media screen and (max-width: 857px) {
-          .blog-gridlayout .blog-entries .blog-entry article {
-            line-height: 1.2rem; } }
   .blog-gridlayout .sidebar {
     grid-area: sidebar; }
-    @media screen and (max-width: 857px) {
+    @media screen and (max-width: 700px) {
       .blog-gridlayout .sidebar {
         display: none; } }
     .blog-gridlayout .sidebar .other-posts-sections {
@@ -619,6 +673,10 @@ main .fixed-left-side {
         font-weight: 500; }
       .blog-gridlayout .sidebar .other-posts-sections:hover {
         opacity: 1; }
+      @media screen and (min-width: 701px) and (max-width: 1100px) {
+        .blog-gridlayout .sidebar .other-posts-sections h4 {
+          font-size: 1rem;
+          font-weight: 500; } }
   .blog-gridlayout .blogpost {
     grid-area: post; }
     .blog-gridlayout .blogpost .img-box-lg {
@@ -639,18 +697,16 @@ main .fixed-left-side {
         background: rgba(50, 53, 56, 0.5); }
 
 .gallery-layout {
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
   grid-gap: 1rem; }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 700px) {
     .gallery-layout {
-      padding-top: 0.5rem;
-      grid-template-columns: repeat(auto-fill, minmax(100px, 2fr)); } }
-  @media screen and (max-width: 857px) {
+      padding-top: 0.5rem; } }
+  @media screen and (min-width: 701px) and (max-width: 1100px) {
     .gallery-layout {
-      padding-top: 0.5rem;
-      grid-template-columns: repeat(auto-fill, minmax(145px, 2fr)); } }
+      padding-top: 0.5rem; } }
   .gallery-layout .thumbnail {
     background-position: center;
     background-size: cover;
@@ -686,7 +742,7 @@ main .fixed-left-side {
   grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
   grid-gap: 0.5rem;
   padding: 0; }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 700px) {
     .photo-layout {
       padding-top: 0.5rem;
       grid-template-columns: repeat(auto-fill, minmax(130px, 2fr)); } }
