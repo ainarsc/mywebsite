@@ -6,26 +6,25 @@ $font-color-light: lighten(#D4DDE1, 10%);
 $font-color-dark: #335252;
 $font-color-alternative: $secondary-color;
 $show-home-image: true;
-$home-image: url(../img_files/DSC01071.jpg);
-$side-margin: 12rem;
+$home-image: url("../img_files/DSC01071.jpg");
+$side-margin: 12%;
 $background-opacity: 0.5;
 $hidetext: none;
 $box-corner-radius: 5px;
-$site-font: "Raleway", sans-serif;
-//'Raleway', Tahoma, Geneva, sans-serif;
+$site-font: "Raleway", sans-serif; //'Raleway', Tahoma, Geneva, sans-serif;
 //#444
 //#ffcc66
 //'Helvetica'
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }
-@mixin round-corners{
+@mixin round-corners {
   border-top-left-radius: $box-corner-radius;
   border-top-right-radius: $box-corner-radius;
   border-bottom-right-radius: $box-corner-radius;
   border-bottom-left-radius: $box-corner-radius;
 }
-@mixin sidemargins{
+@mixin sidemargins {
   margin-left: $side-margin;
   margin-right: $side-margin;
 }
@@ -33,14 +32,16 @@ $site-font: "Raleway", sans-serif;
 body because I included backgound mixin in the body styling
 The following could be set up in the body or other way, but this is
 showing SASS convention**/
-@mixin background{
+@mixin background {
   /** checks the variable thats set to true/false at the global scope **/
-  @if $show-home-image{
-    &#bg-img{
+  @if $show-home-image {
+    &#bg-img {
       background: $home-image;
       background-attachment: fixed;
       background-size: cover;
-      &:after { /** after effect, has to include content **/
+
+      &:after {
+        /** after effect, has to include content **/
         content: '';
         position: absolute;
         top: 0;
@@ -53,45 +54,39 @@ showing SASS convention**/
     }
   }
 }
-@mixin shadow{
+@mixin shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-@mixin fade{
+@mixin fade {
   opacity: 0.8;
-  &:hover{
+
+  &:hover {
     opacity: 1;
   }
 }
-@mixin grow{
+@mixin grow {
   &:hover {
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);
   }
 }
-
-
 // Media query that takes affect on screens 500>=
-@mixin smScreen{
-  @media screen and (max-width: 500px){
+
+@mixin smScreen {
+  @media screen and (max-width: 700px) {
     @content;
   }
 }
 // Takes effect when screen is 768px <=
-@mixin mdScreen{
-  @media screen and (max-width: 857px){
-    @content;
-  }
-}
 //Takes effect when screen is between 789 and 1170px
-@mixin lgScreen{
-  @media screen and (min-width: 858px) and (max-width: 1000px){
+@mixin lgScreen {
+  @media screen and (min-width: 701px) and (max-width: 1100px) {
     @content;
   }
 }
-@mixin xlScreen{
-  @media screen and (min-width: 1171){
+@mixin xlScreen {
+  @media screen and (min-width: 1920px) {
     @content;
   }
 }

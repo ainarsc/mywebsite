@@ -6,12 +6,20 @@
   top:35px;// positioning from the top
   cursor: pointer; //shows the little hand pointer on it
   @include easeOut;
+  @include xlScreen{
+    right: 45px;// positioning from the right
+    top: 45px;// positioning from the top
+  }
   .btn-line{
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
     background: $box-background-color;
     @include easeOut;
+    @include xlScreen{
+      width: 35px;
+      height: 4px;
+    }
   }
   // Rotate into x with menu lines
   &.close{ // Class gets added menu-btn lass list by JS once button pressed on the site
