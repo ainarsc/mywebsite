@@ -9,7 +9,7 @@ showing SASS convention**/
   top: 35px;
   cursor: pointer;
   transition: all 0.5s ease-out; }
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: 1420px) {
     .menu-btn {
       right: 45px;
       top: 45px; } }
@@ -19,7 +19,7 @@ showing SASS convention**/
     margin: 0 0 5px 0;
     background: white;
     transition: all 0.5s ease-out; }
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: 1420px) {
       .menu-btn .btn-line {
         width: 35px;
         height: 4px; } }
@@ -99,18 +99,18 @@ come in seperatly **/
 .nav-items:nth-child(4) {
   transition-delay: 0.4s; }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1420px) {
   .menu .nav-link {
     font-size: 2rem; } }
 
-@media screen and (min-width: 701px) and (max-width: 1100px) {
+@media screen and (min-width: 601px) and (max-width: 1000px) {
   main {
     align-items: center;
     text-align: center; }
     main .lg-heading {
       line-height: 1; } }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   main#home h1 {
     margin-top: 10vh; }
   .menu .nav-link {
@@ -265,7 +265,7 @@ body {
     font-weight: normal;
     padding: 1.5rem;
     color: #f2f5f6; }
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: 1420px) {
       #page-layout header h2 {
         font-size: 3rem; } }
 
@@ -279,7 +279,6 @@ body {
 
 #page-layout p {
   margin: 0;
-  text-align: justify;
   font-weight: 100; }
 
 h1,
@@ -296,7 +295,7 @@ h5 {
   h5.home-lg-heading {
     font-size: 5rem;
     color: #f2f5f6; }
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 600px) {
       h1.home-lg-heading,
       h2.home-lg-heading,
       h3.home-lg-heading,
@@ -390,6 +389,9 @@ p {
   text-align: justify;
   line-height: 1.6;
   padding: 0.5rem; }
+  @media screen and (min-width: 1420px) {
+    p {
+      font-size: 1.5rem; } }
 
 a {
   color: #f2f5f6;
@@ -403,7 +405,7 @@ a {
 
 .extra-padding-top {
   padding-top: 1rem; }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 600px) {
     .extra-padding-top {
       padding-top: 0; } }
 
@@ -435,7 +437,7 @@ a {
       color: #f2f5f6;
       background: rgba(170, 75, 65, 0.8);
       transition: all 0.5s ease-out; }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 600px) {
     .prev-page-button {
       padding-bottom: 0.8rem; } }
 
@@ -445,33 +447,40 @@ a {
 main#home {
   padding: 4em;
   overflow: hidden;
-  height: 100vh; }
+  height: 100vh;
+  text-align: right; }
   main#home h1 {
     margin-top: 20vh; }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 600px) {
     main#home {
       text-align: center; } }
+  @media screen and (min-width: 1420px) {
+    main#home {
+      font-size: 1.5rem; } }
+  @media screen and (min-width: 1920px) {
+    main#home {
+      font-size: 1.9rem; } }
 
 main#page-content {
   padding-bottom: 2rem;
   padding-top: 7rem;
   min-height: calc(100vh - 46px);
-  margin-left: 12%;
-  margin-right: 12%; }
-  @media screen and (max-width: 700px) {
+  margin-left: 15%;
+  margin-right: 15%; }
+  @media screen and (max-width: 600px) {
     main#page-content {
-      margin-left: 1rem;
-      margin-right: 1rem;
-      padding-top: 6rem;
+      margin-left: 1.3rem;
+      margin-right: 1.3rem;
+      padding-top: 6.5rem;
       padding-bottom: 0;
       font-size: 0.8rem; } }
-  @media screen and (min-width: 701px) and (max-width: 1100px) {
+  @media screen and (min-width: 601px) and (max-width: 1000px) {
     main#page-content {
       margin-left: 4rem;
       margin-right: 4rem;
       text-align: left;
       padding-bottom: 0.5rem; } }
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: 1420px) {
     main#page-content {
       font-size: 1.5rem;
       padding-top: 8rem; } }
@@ -496,7 +505,7 @@ main .fixed-left-side {
   main .fixed-left-side a {
     display: block;
     color: #2D3033; }
-  @media screen and (min-width: 701px) and (max-width: 1100px) {
+  @media screen and (min-width: 601px) and (max-width: 1000px) {
     main .fixed-left-side {
       position: static;
       margin-top: 0;
@@ -505,7 +514,7 @@ main .fixed-left-side {
       margin-left: calc(50% - 75px); }
       main .fixed-left-side a {
         display: inline-block; } }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 600px) {
     main .fixed-left-side {
       position: static;
       margin-top: 0;
@@ -522,11 +531,11 @@ main .fixed-left-side {
   border-bottom-left-radius: 5px; }
   .about-me h3 {
     padding-left: 0.5rem; }
+    @media screen and (min-width: 1420px) {
+      .about-me h3 {
+        font-size: 1.8rem; } }
   .about-me img {
-    max-height: 30vh; }
-    @media screen and (max-width: 700px) {
-      .about-me img {
-        width: 25vh; } }
+    max-width: 50%; }
     .about-me img.img1 {
       float: left;
       padding-top: 0.5rem;
@@ -540,121 +549,97 @@ main .fixed-left-side {
     .about-me p.row {
       line-height: 1.5;
       padding: 0.5; }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 600px) {
     .about-me h3 {
       font-size: 1rem;
       padding-right: 0.5rem; } }
-  @media screen and (min-width: 701px) and (max-width: 1100px) {
+  @media screen and (min-width: 601px) and (max-width: 1000px) {
     .about-me h3 {
       text-align: left; } }
+  @media screen and (min-width: 1420px) {
+    .about-me {
+      font-size: 1.5rem; } }
+  @media screen and (min-width: 1920px) {
+    .about-me {
+      font-size: 1.8rem; } }
 
 .blog-gridlayout {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 2rem;
-  margin-bottom: 1rem;
-  grid-template-areas: 'post sidebar'; }
-  @media screen and (min-width: 701px) and (max-width: 1100px) {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+  grid-gap: 1rem;
+  margin-bottom: 1rem; }
+  @media screen and (max-width: 600px) {
     .blog-gridlayout {
-      padding-top: 0.5rem;
-      margin-bottom: 0; } }
-  @media screen and (max-width: 700px) {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 2fr)); } }
+  @media screen and (min-width: 601px) and (max-width: 1000px) {
     .blog-gridlayout {
-      grid-template-columns: 100%;
-      font-size: 0.8rem; } }
-  .blog-gridlayout .blog-entries {
-    grid-area: post; }
-    .blog-gridlayout .blog-entries .blog-entry {
-      display: grid;
-      grid-template-columns: 2fr 3fr;
-      grid-template-areas: 'picture intro';
-      max-height: 35vh;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      background-color: white;
-      margin-bottom: 1rem;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      transition: all 0.5s ease-out;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 2fr)); } }
+  @media screen and (min-width: 1420px) {
+    .blog-gridlayout {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 2fr)); } }
+  @media screen and (min-width: 1920px) {
+    .blog-gridlayout {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 2fr)); } }
+  .blog-gridlayout .blog-entry {
+    background-color: white;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.5s ease-out;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px; }
+    .blog-gridlayout .blog-entry:hover {
+      -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      transform: scale(1.05); }
+    .blog-gridlayout .blog-entry .img-box-sm {
+      min-height: 30vh;
+      padding: 0;
+      background-color: #2D3033;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0.8;
       border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-      border-bottom-left-radius: 5px; }
-      @media screen and (min-width: 701px) and (max-width: 1100px) {
-        .blog-gridlayout .blog-entries .blog-entry {
-          max-height: 28vh;
+      border-top-right-radius: 5px; }
+    .blog-gridlayout .blog-entry .post-description {
+      padding: 0.6rem; }
+      .blog-gridlayout .blog-entry .post-description .post-date {
+        color: #AA4B41;
+        padding-top: 0.2rem;
+        padding-left: 0.5rem;
+        text-align: center; }
+      .blog-gridlayout .blog-entry .post-description h1 {
+        padding-left: 0.5rem;
+        text-align: center;
+        font-size: 1.5rem; }
+      .blog-gridlayout .blog-entry .post-description p {
+        text-align: center;
+        font-size: 0.8rem; }
+      @media screen and (min-width: 1420px) {
+        .blog-gridlayout .blog-entry .post-description h1 {
+          font-size: 1.6rem; }
+        .blog-gridlayout .blog-entry .post-description p {
           font-size: 1rem; } }
-      @media screen and (max-width: 700px) {
-        .blog-gridlayout .blog-entries .blog-entry {
-          max-height: 24vh;
-          grid-template-columns: 1fr 2fr; } }
-      .blog-gridlayout .blog-entries .blog-entry .blog-article {
-        overflow: hidden;
-        text-overflow: ellipsis; }
-        .blog-gridlayout .blog-entries .blog-entry .blog-article p {
-          line-height: 1.5; }
-      .blog-gridlayout .blog-entries .blog-entry .img-box-sm {
-        grid-area: picture;
-        min-height: 35vh;
-        max-height: 35vh;
-        padding: 0;
-        background-color: #2D3033;
-        width: 100%;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        opacity: 0.8;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px; }
-        @media screen and (max-width: 700px) {
-          .blog-gridlayout .blog-entries .blog-entry .img-box-sm {
-            max-width: 30vh;
-            min-width: 23vh; } }
-        @media screen and (min-width: 701px) and (max-width: 1100px) {
-          .blog-gridlayout .blog-entries .blog-entry .img-box-sm {
-            min-height: 28vh;
-            min-width: 25vh;
-            max-height: 28vh; } }
-      .blog-gridlayout .blog-entries .blog-entry:hover {
-        -webkit-transform: scale(1.05);
-        -ms-transform: scale(1.05);
-        transform: scale(1.05); }
-      .blog-gridlayout .blog-entries .blog-entry article {
-        grid-area: intro;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        padding: 0.6rem;
-        text-align: left; }
-        .blog-gridlayout .blog-entries .blog-entry article .blog-description {
-          color: #AA4B41;
-          padding-top: 0.5rem;
-          padding-left: 0.5rem; }
-        @media screen and (min-width: 701px) and (max-width: 1100px) {
-          .blog-gridlayout .blog-entries .blog-entry article {
-            line-height: 0.6rem;
-            max-height: 25vh;
-            min-width: 25vh; }
-            .blog-gridlayout .blog-entries .blog-entry article h1 {
-              padding: 0.5rem;
-              font-size: 1.2rem; } }
-        @media screen and (max-width: 700px) {
-          .blog-gridlayout .blog-entries .blog-entry article {
-            max-height: 22vh;
-            min-width: 30vh;
-            line-height: 0.5rem;
-            text-align: left;
-            padding-left: 0; }
-            .blog-gridlayout .blog-entries .blog-entry article h1 {
-              padding-left: 0.5rem;
-              text-align: left;
-              font-size: 0.7rem; }
-            .blog-gridlayout .blog-entries .blog-entry article a {
-              font-size: 1rem; } }
-  .blog-gridlayout .sidebar {
+      @media screen and (min-width: 1920px) {
+        .blog-gridlayout .blog-entry .post-description h1 {
+          font-size: 1.8rem; }
+        .blog-gridlayout .blog-entry .post-description p {
+          font-size: 1.2rem; } }
+
+.blogpost-layout {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 1rem;
+  grid-template-areas: 'post sidebar'; }
+  @media screen and (max-width: 600px) {
+    .blogpost-layout {
+      display: block; } }
+  .blogpost-layout .sidebar {
     grid-area: sidebar; }
-    @media screen and (max-width: 700px) {
-      .blog-gridlayout .sidebar {
-        display: none; } }
-    .blog-gridlayout .sidebar .other-posts-sections {
+    .blogpost-layout .sidebar .other-posts .other-posts-sections {
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -668,20 +653,29 @@ main .fixed-left-side {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       opacity: 0.8;
       transition: all 0.5s ease-out; }
-      .blog-gridlayout .sidebar .other-posts-sections h4 {
-        font-size: 1.3rem;
-        font-weight: 500; }
-      .blog-gridlayout .sidebar .other-posts-sections:hover {
+      .blogpost-layout .sidebar .other-posts .other-posts-sections:hover {
         opacity: 1; }
-      @media screen and (min-width: 701px) and (max-width: 1100px) {
-        .blog-gridlayout .sidebar .other-posts-sections h4 {
-          font-size: 1rem;
+      @media screen and (min-width: 601px) and (max-width: 1000px) {
+        .blogpost-layout .sidebar .other-posts .other-posts-sections h4 {
+          font-size: 1.2rem;
           font-weight: 500; } }
-  .blog-gridlayout .blogpost {
-    grid-area: post; }
-    .blog-gridlayout .blogpost .img-box-lg {
+      @media screen and (max-width: 600px) {
+        .blogpost-layout .sidebar .other-posts .other-posts-sections {
+          margin-bottom: 0; } }
+    @media screen and (max-width: 600px) {
+      .blogpost-layout .sidebar .other-posts {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 3fr));
+        grid-gap: 0.3rem;
+        padding: 0.5rem; }
+        .blogpost-layout .sidebar .other-posts h4 {
+          font-size: 0.8rem; } }
+  .blogpost-layout .blogpost {
+    grid-area: post;
+    font-size: 1rem; }
+    .blogpost-layout .blogpost .img-box-lg {
       width: 100%;
-      min-height: 20vh;
+      min-height: 30vh;
       max-height: 70vh;
       background-position: center;
       background-size: cover;
@@ -689,24 +683,35 @@ main .fixed-left-side {
       opacity: 0.8;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px; }
-      .blog-gridlayout .blogpost .img-box-lg .empty-space {
+      .blogpost-layout .blogpost .img-box-lg .empty-space {
         min-height: 10vh; }
-      .blog-gridlayout .blogpost .img-box-lg .blog-heading {
+      @media screen and (max-width: 600px) {
+        .blogpost-layout .blogpost .img-box-lg {
+          max-height: 35vh; } }
+      .blogpost-layout .blogpost .img-box-lg .blog-heading {
         padding: 1rem;
         text-align: center;
         background: rgba(50, 53, 56, 0.5); }
+        @media screen and (max-width: 600px) {
+          .blogpost-layout .blogpost .img-box-lg .blog-heading {
+            font-size: 1.7rem; } }
 
 .gallery-layout {
   padding-top: 0.5rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
   grid-gap: 1rem; }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 600px) {
+    .gallery-layout {
+      padding-top: 0.5rem;
+      grid-gap: 0.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 2fr)); } }
+  @media screen and (min-width: 601px) and (max-width: 1000px) {
     .gallery-layout {
       padding-top: 0.5rem; } }
-  @media screen and (min-width: 701px) and (max-width: 1100px) {
+  @media screen and (min-width: 1420px) {
     .gallery-layout {
-      padding-top: 0.5rem; } }
+      grid-template-columns: repeat(auto-fill, minmax(250px, 2fr)); } }
   .gallery-layout .thumbnail {
     background-position: center;
     background-size: cover;
@@ -742,10 +747,11 @@ main .fixed-left-side {
   grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
   grid-gap: 0.5rem;
   padding: 0; }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 600px) {
     .photo-layout {
       padding-top: 0.5rem;
-      grid-template-columns: repeat(auto-fill, minmax(130px, 2fr)); } }
+      grid-gap: 0.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 2fr)); } }
   .photo-layout .photo {
     min-width: 5rem; }
     .photo-layout .photo img {
