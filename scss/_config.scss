@@ -7,7 +7,7 @@ $font-color-dark: #335252;
 $font-color-alternative: $secondary-color;
 $show-home-image: true;
 $home-image: url("../img_files/DSC01071.jpg");
-$side-margin: 12%;
+$side-margin: 15%;
 $background-opacity: 0.5;
 $hidetext: none;
 $box-corner-radius: 5px;
@@ -74,18 +74,23 @@ showing SASS convention**/
 // Media query that takes affect on screens 500>=
 
 @mixin smScreen {
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 600px) {
     @content;
   }
 }
 // Takes effect when screen is 768px <=
 //Takes effect when screen is between 789 and 1170px
 @mixin lgScreen {
-  @media screen and (min-width: 701px) and (max-width: 1100px) {
+  @media screen and (min-width: 601px) and (max-width: 1000px) {
     @content;
   }
 }
 @mixin xlScreen {
+  @media screen and (min-width: 1420px) {
+    @content;
+  }
+}
+@mixin xxlScreen {
   @media screen and (min-width: 1920px) {
     @content;
   }

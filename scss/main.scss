@@ -31,11 +31,10 @@ body {
       font-weight: normal;
       padding: 1.5rem;
       color: $font-color-light;
-      @include xlScreen{
+      @include xlScreen {
         font-size: 3rem;
       }
     }
-
   }
 
   footer {
@@ -50,7 +49,7 @@ body {
 
   p {
     margin: 0;
-    text-align: justify;
+    //text-align: justify;
     font-weight: 100;
   }
 }
@@ -67,7 +66,7 @@ h5 {
   &.home-lg-heading {
     font-size: 5rem;
     color: $font-color-light;
-    @include smScreen{
+    @include smScreen {
       font-size: 3rem;
     }
   }
@@ -133,6 +132,9 @@ p {
   text-align: justify;
   line-height: 1.6;
   padding: 0.5rem;
+  @include xlScreen{
+    font-size: 1.5rem;
+  }
 }
 
 a {
@@ -209,12 +211,18 @@ main {
     padding: 4em;
     overflow: hidden;
     height: 100vh;
-
+    text-align: right;
     h1 {
       margin-top: 20vh;
     }
-    @include smScreen{
+    @include smScreen {
       text-align: center;
+    }
+    @include xlScreen{
+      font-size: 1.5rem;
+    }
+    @include xxlScreen{
+      font-size: 1.9rem;
     }
   }
 
@@ -224,9 +232,9 @@ main {
     min-height: calc(100vh - 46px);
     @include sidemargins;
     @include smScreen {
-      margin-left: 1rem;
-      margin-right: 1rem;
-      padding-top: 6rem;
+      margin-left: 1.3rem;
+      margin-right: 1.3rem;
+      padding-top: 6.5rem;
       padding-bottom: 0;
       font-size: 0.8rem;
     }
@@ -236,7 +244,7 @@ main {
       text-align: left;
       padding-bottom: 0.5rem;
     }
-    @include xlScreen{
+    @include xlScreen {
       font-size: 1.5rem;
       padding-top: 8rem;
     }
@@ -290,19 +298,23 @@ main {
     }
   }
 }
-// ABOUT ME PAGE CONTENT
 
+// ABOUT ME PAGE CONTENT
 .about-me {
   background-color: $box-background-color;
   @include round-corners;
+
   h3 {
     padding-left: 0.5rem;
-  }
-  img {
-    max-height: 30vh;
-    @include smScreen {
-      width: 25vh;
+    @include xlScreen{
+      font-size: 1.8rem;
     }
+  }
+
+  img {
+    //max-height: 30vh;
+    max-width: 50%;
+
 
     &.img1 {
       float: left;
@@ -336,169 +348,155 @@ main {
       text-align: left;
     }
   }
+  @include xlScreen{
+    font-size: 1.5rem;
+  }
+  @include xxlScreen{
+    font-size: 1.8rem;
+  }
 }
 // BLOG PAGE
 
 .blog-gridlayout {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+  grid-gap: 1rem;
   margin-bottom: 1rem;
-  grid-template-areas: 'post sidebar';
-
-  @include lgScreen {
-    padding-top: 0.5rem;
-    margin-bottom: 0;
-    //font-size: 0.8rem;
+  @include smScreen{
+    grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
   }
-  @include smScreen {
-    grid-template-columns: 100%;
-    font-size: 0.8rem;
-
-
+  @include lgScreen{
+    grid-template-columns: repeat(auto-fill, minmax(220px, 2fr));
   }
+  @include xlScreen{
+    grid-template-columns: repeat(auto-fill, minmax(280px, 2fr));
+  }
+  @include xxlScreen{
+    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+  }
+  //grid-template-areas: 'post sidebar';
+  .blog-entry {
+    background-color: $box-background-color;
+    margin-bottom: 0.5rem;
+    @include shadow;
+    @include grow;
+    @include easeOut;
+    @include round-corners;
 
-  .blog-entries {
-    grid-area: post;
+    .img-box-sm {
+      min-height: 30vh;
+      padding: 0;
+      background-color: $primary-color;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0.8;
+      border-top-left-radius: $box-corner-radius;
+      border-top-right-radius: $box-corner-radius;
+    }
 
-    .blog-entry {
-      display: grid;
-      grid-template-columns: 2fr 3fr;
-      grid-template-areas: 'picture intro';
-      max-height: 35vh;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      @include lgScreen {
-        max-height: 28vh;
-        font-size: 1rem;
+    .post-description {
+      padding: 0.6rem;
+
+      .post-date {
+        color: $font-color-alternative;
+        padding-top: 0.2rem;
+        padding-left: 0.5rem;
+        text-align: center;
       }
-      @include smScreen {
-        max-height: 24vh;
-        grid-template-columns: 1fr 2fr;
+
+      h1 {
+        padding-left: 0.5rem;
+        text-align: center;
+        font-size: 1.5rem;
       }
 
-      .blog-article {
-        p {
-          line-height: 1.5;
-        }
-        overflow: hidden;
-        text-overflow: ellipsis;
+      p {
+        text-align: center;
+        font-size: 0.8rem;
       }
-
-      .img-box-sm {
-        @include smScreen {
-          max-width: 30vh;
-          min-width: 23vh;
+      @include xlScreen{
+        h1{
+          font-size: 1.6rem;
         }
-        @include lgScreen {
-          min-height: 28vh;
-          min-width: 25vh;
-          max-height: 28vh;
+        p{
+          font-size: 1rem;
         }
-        grid-area: picture;
-        min-height: 35vh;
-        //min-width: 32vh;
-        max-height: 35vh;
-        padding: 0;
-        background-color: $primary-color;
-        width: 100%;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        opacity: 0.8;
-        border-top-left-radius: $box-corner-radius;
-        border-bottom-left-radius: $box-corner-radius;
       }
-      background-color: $box-background-color;
-      margin-bottom: 1rem;
-      @include shadow;
-      @include grow;
-      @include easeOut;
-      @include round-corners;
-
-      article {
-        grid-area: intro;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        padding: 0.6rem;
-        text-align: left;
-
-        .blog-description {
-          color: $font-color-alternative;
-          padding-top: 0.5rem;
-          padding-left: 0.5rem;
+      @include xxlScreen{
+        h1{
+          font-size: 1.8rem;
         }
-        @include lgScreen {
-          line-height: 0.6rem;
-          max-height: 25vh;
-          min-width: 25vh;
-
-          h1 {
-            padding: 0.5rem;
-            font-size: 1.2rem;
-          }
-        }
-        @include smScreen {
-          max-height: 22vh;
-          min-width: 30vh;
-          line-height: 0.5rem;
-          text-align: left;
-          padding-left: 0;
-
-          h1 {
-            padding-left: 0.5rem;
-            text-align: left;
-            font-size: 0.7rem;
-          }
-
-          a {
-            font-size: 1rem;
-          }
+        p{
+          font-size: 1.2rem;
         }
       }
     }
+  }
+}
+
+// BLOG POST
+.blogpost-layout{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 1rem;
+  //margin-bottom: 1rem;
+  grid-template-areas: 'post sidebar';
+  @include smScreen{
+    //grid-template-columns: 100%;
+    display: block;
   }
 
   .sidebar {
     grid-area: sidebar;
-    @include smScreen {
-      display: none;
-    }
+    .other-posts{
+      .other-posts-sections {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        color: $font-color-light;
 
-    .other-posts-sections {
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      color: $font-color-light;
-
-      h4 {
-        font-size: 1.3rem;
-        font-weight: 500;
-      }
-      @include round-corners;
-      @include shadow;
-      @include fade;
-      @include easeOut;
-      @include lgScreen {
-        h4 {
-          font-size: 1rem;
-          font-weight: 500;
+        @include round-corners;
+        @include shadow;
+        @include fade;
+        @include easeOut;
+        @include lgScreen {
+          h4 {
+            font-size: 1.2rem;
+            font-weight: 500;
+          }
+        }
+        @include smScreen{
+          margin-bottom: 0;
         }
       }
+      @include smScreen {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 3fr));
+        grid-gap: 0.3rem;
+        padding: 0.5rem;
+        h4{
+          font-size: 0.8rem;
+        }
+      }
+
     }
+
+
   }
 
   .blogpost {
     grid-area: post;
-
+    font-size: 1rem;
     .img-box-lg {
       .empty-space {
         min-height: 10vh;
       }
       width: 100%;
-      min-height: 20vh;
+      min-height: 30vh;
       max-height: 70vh;
       background-position: center;
       background-size: cover;
@@ -506,17 +504,22 @@ main {
       opacity: 0.8;
       border-top-left-radius: $box-corner-radius;
       border-top-right-radius: $box-corner-radius;
-
+      @include smScreen{
+        max-height: 35vh;
+      }
       .blog-heading {
         padding: 1rem;
         text-align: center;
         background: rgba(lighten($primary-color, 2), 0.5);
+        @include smScreen{
+          font-size: 1.7rem;
+        }
       }
     }
   }
 }
-// GALLERY PAGE
 
+// GALLERY PAGE
 .gallery-layout {
   padding-top: 0.5rem;
   display: grid;
@@ -524,9 +527,14 @@ main {
   grid-gap: 1rem;
   @include smScreen {
     padding-top: 0.5rem;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
   }
   @include lgScreen {
     padding-top: 0.5rem;
+  }
+  @include xlScreen{
+    grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
   }
 
   .thumbnail {
@@ -558,8 +566,8 @@ main {
     @include fade;
   }
 }
-// PHOTOGRAPHY
 
+// PHOTOGRAPHY
 .photo-layout {
   //min-height: 100vh;
   padding-top: 1rem;
@@ -569,7 +577,8 @@ main {
   padding: 0;
   @include smScreen {
     padding-top: 0.5rem;
-    grid-template-columns: repeat(auto-fill, minmax(130px, 2fr));
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
   }
   //grid: 150px;
   .photo {
