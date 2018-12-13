@@ -74,14 +74,14 @@ showing SASS convention**/
 // Media query that takes affect on screens 500>=
 
 @mixin smScreen {
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 707px) {
     @content;
   }
 }
 // Takes effect when screen is 768px <=
 //Takes effect when screen is between 789 and 1170px
 @mixin lgScreen {
-  @media screen and (min-width: 601px) and (max-width: 1000px) {
+  @media screen and (min-width: 708px) and (max-width: 1000px) {
     @content;
   }
 }

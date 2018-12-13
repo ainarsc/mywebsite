@@ -440,7 +440,18 @@ main {
   }
 
   .comming-soon{
-    opacity: 0.4;
+    a{
+      opacity: 0.3;
+    }
+    h1{
+      opacity: 0.3;
+    }
+    .img-box-sm{
+      opacity: 0.3;
+    }
+    p{
+      opacity: 0.3;
+    }
   }
 }
 
@@ -449,6 +460,7 @@ main {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-gap: 1rem;
+  padding-bottom: 2rem;
   //margin-bottom: 1rem;
   grid-template-areas: 'post sidebar';
   @include smScreen{
@@ -490,10 +502,7 @@ main {
           font-size: 0.8rem;
         }
       }
-
     }
-
-
   }
 
   .blogpost {
@@ -501,7 +510,7 @@ main {
     font-size: 1rem;
     .img-box-lg {
       .empty-space {
-        min-height: 15vh;
+        min-height: 20vh;
       }
       width: 100%;
       min-height: 30vh;
@@ -513,7 +522,12 @@ main {
       border-top-left-radius: $box-corner-radius;
       border-top-right-radius: $box-corner-radius;
       @include smScreen{
-        max-height: 35vh;
+        max-height: 45vh;
+      }
+      @include lgScreen {
+        h1{
+          font-size: 2.5rem;
+        }
       }
       .blog-heading {
         padding: 1rem;
@@ -525,10 +539,11 @@ main {
       }
     }
     article{
-      min-height: 20vh;
+      min-height: 25vh;
       p{
         padding-top: 8vh;
         text-align: center;
+        font-size: 2rem;
       }
     }
   }
