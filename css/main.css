@@ -229,6 +229,12 @@ come in seperatly **/
 .india4 {
   background: url(../img_files/gallery_thumbnails/india_part4.jpg); }
 
+.vietnam3 {
+  background: url(../img_files/gallery_thumbnails/vietnam_part3.jpg); }
+
+.singapore {
+  background: url(../img_files/gallery_thumbnails/singapore_part1.jpg); }
+
 * {
   box-sizing: border-box; }
 
@@ -567,7 +573,8 @@ main .fixed-left-side {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
   grid-gap: 1rem;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  padding-top: 0.5rem; }
   @media screen and (max-width: 600px) {
     .blog-gridlayout {
       grid-template-columns: repeat(auto-fill, minmax(200px, 2fr)); } }
@@ -628,6 +635,8 @@ main .fixed-left-side {
           font-size: 1.8rem; }
         .blog-gridlayout .blog-entry .post-description p {
           font-size: 1.2rem; } }
+  .blog-gridlayout .comming-soon {
+    opacity: 0.4; }
 
 .blogpost-layout {
   display: grid;
@@ -684,7 +693,7 @@ main .fixed-left-side {
       border-top-left-radius: 5px;
       border-top-right-radius: 5px; }
       .blogpost-layout .blogpost .img-box-lg .empty-space {
-        min-height: 10vh; }
+        min-height: 15vh; }
       @media screen and (max-width: 600px) {
         .blogpost-layout .blogpost .img-box-lg {
           max-height: 35vh; } }
@@ -695,6 +704,11 @@ main .fixed-left-side {
         @media screen and (max-width: 600px) {
           .blogpost-layout .blogpost .img-box-lg .blog-heading {
             font-size: 1.7rem; } }
+    .blogpost-layout .blogpost article {
+      min-height: 20vh; }
+      .blogpost-layout .blogpost article p {
+        padding-top: 8vh;
+        text-align: center; }
 
 .gallery-layout {
   padding-top: 0.5rem;
