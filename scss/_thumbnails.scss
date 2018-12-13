@@ -2,6 +2,7 @@ $iceland-part1: url(../img_files/gallery_thumbnails/iceland_part1.jpg);
 $iceland-part2: url(../img_files/gallery_thumbnails/iceland_part2.jpg);
 $vietnam-part1: url(../img_files/gallery_thumbnails/vietnam_part1.jpg);
 $vietnam-part2: url(../img_files/gallery_thumbnails/vietnam_part2.jpg);
+$vietnam-part3: url(../img_files/gallery_thumbnails/vietnam_part3.jpg);
 $newzealand-part1: url(../img_files/gallery_thumbnails/newzealand_part1.jpg);
 $newzealand-part2: url(../img_files/gallery_thumbnails/newzealand_part2.jpg);
 $newzealand-part3: url(../img_files/gallery_thumbnails/newzealand_part3.jpg);
@@ -24,6 +25,7 @@ $india-part1: url(../img_files/gallery_thumbnails/india_part1.jpg);
 $india-part2: url(../img_files/gallery_thumbnails/india_part2.jpg);
 $india-part3: url(../img_files/gallery_thumbnails/india_part3.jpg);
 $india-part4: url(../img_files/gallery_thumbnails/india_part4.jpg);
+$singapore-part1: url(../img_files/gallery_thumbnails/singapore_part1.jpg);
 
 
 .iceland1{
@@ -103,4 +105,10 @@ $india-part4: url(../img_files/gallery_thumbnails/india_part4.jpg);
 }
 .india4{
   background: $india-part4;
+}
+.vietnam3{
+  background: $vietnam-part3;
+}
+.singapore{
+  background: $singapore-part1;
 }

@@ -204,6 +204,8 @@ a {
 .text-left {
   text-align: left;
 }
+
+
 // MAIN CONTENT FORMATING
 
 main {
@@ -363,6 +365,7 @@ main {
   grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
   grid-gap: 1rem;
   margin-bottom: 1rem;
+  padding-top: 0.5rem;
   @include smScreen{
     grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
   }
@@ -435,6 +438,10 @@ main {
       }
     }
   }
+
+  .comming-soon{
+    opacity: 0.4;
+  }
 }
 
 // BLOG POST
@@ -494,7 +501,7 @@ main {
     font-size: 1rem;
     .img-box-lg {
       .empty-space {
-        min-height: 10vh;
+        min-height: 15vh;
       }
       width: 100%;
       min-height: 30vh;
@@ -515,6 +522,13 @@ main {
         @include smScreen{
           font-size: 1.7rem;
         }
+      }
+    }
+    article{
+      min-height: 20vh;
+      p{
+        padding-top: 8vh;
+        text-align: center;
       }
     }
   }
