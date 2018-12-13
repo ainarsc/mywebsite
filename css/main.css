@@ -49,6 +49,32 @@ showing SASS convention**/
     width: 50%;
     height: 100vh;
     overflow: hidden; }
+    .menu-nav .coolpic, .menu-branding .coolpic {
+      margin-right: 0;
+      align-items: center; }
+      .menu-nav .coolpic .profilepic, .menu-branding .coolpic .profilepic {
+        background-image: url(../img_files/branding-photo.jpg);
+        min-height: 8rem;
+        max-width: 8rem;
+        background-position: center;
+        background-size: cover;
+        border-style: solid;
+        border-color: #AA4B41;
+        border-radius: 20%;
+        opacity: 0.9;
+        margin-left: 20%; }
+        @media screen and (max-width: 707px) {
+          .menu-nav .coolpic .profilepic, .menu-branding .coolpic .profilepic {
+            min-width: 5rem;
+            max-height: 5rem; } }
+        @media screen and (min-width: 1420px) {
+          .menu-nav .coolpic .profilepic, .menu-branding .coolpic .profilepic {
+            min-height: 12rem;
+            max-width: 12rem; } }
+      .menu-nav .coolpic p, .menu-branding .coolpic p {
+        color: #f2f5f6;
+        text-align: center;
+        padding: 0; }
   .menu-nav {
     margin: 0;
     padding: 0;
@@ -103,14 +129,14 @@ come in seperatly **/
   .menu .nav-link {
     font-size: 2rem; } }
 
-@media screen and (min-width: 601px) and (max-width: 1000px) {
+@media screen and (min-width: 708px) and (max-width: 1000px) {
   main {
     align-items: center;
     text-align: center; }
     main .lg-heading {
       line-height: 1; } }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 707px) {
   main#home h1 {
     margin-top: 10vh; }
   .menu .nav-link {
@@ -301,7 +327,7 @@ h5 {
   h5.home-lg-heading {
     font-size: 5rem;
     color: #f2f5f6; }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 707px) {
       h1.home-lg-heading,
       h2.home-lg-heading,
       h3.home-lg-heading,
@@ -411,7 +437,7 @@ a {
 
 .extra-padding-top {
   padding-top: 1rem; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 707px) {
     .extra-padding-top {
       padding-top: 0; } }
 
@@ -443,7 +469,7 @@ a {
       color: #f2f5f6;
       background: rgba(170, 75, 65, 0.8);
       transition: all 0.5s ease-out; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 707px) {
     .prev-page-button {
       padding-bottom: 0.8rem; } }
 
@@ -457,7 +483,7 @@ main#home {
   text-align: right; }
   main#home h1 {
     margin-top: 20vh; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 707px) {
     main#home {
       text-align: center; } }
   @media screen and (min-width: 1420px) {
@@ -473,14 +499,14 @@ main#page-content {
   min-height: calc(100vh - 46px);
   margin-left: 15%;
   margin-right: 15%; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 707px) {
     main#page-content {
       margin-left: 1.3rem;
       margin-right: 1.3rem;
       padding-top: 6.5rem;
       padding-bottom: 0;
       font-size: 0.8rem; } }
-  @media screen and (min-width: 601px) and (max-width: 1000px) {
+  @media screen and (min-width: 708px) and (max-width: 1000px) {
     main#page-content {
       margin-left: 4rem;
       margin-right: 4rem;
@@ -511,7 +537,7 @@ main .fixed-left-side {
   main .fixed-left-side a {
     display: block;
     color: #2D3033; }
-  @media screen and (min-width: 601px) and (max-width: 1000px) {
+  @media screen and (min-width: 708px) and (max-width: 1000px) {
     main .fixed-left-side {
       position: static;
       margin-top: 0;
@@ -520,7 +546,7 @@ main .fixed-left-side {
       margin-left: calc(50% - 75px); }
       main .fixed-left-side a {
         display: inline-block; } }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 707px) {
     main .fixed-left-side {
       position: static;
       margin-top: 0;
@@ -555,11 +581,11 @@ main .fixed-left-side {
     .about-me p.row {
       line-height: 1.5;
       padding: 0.5; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 707px) {
     .about-me h3 {
       font-size: 1rem;
       padding-right: 0.5rem; } }
-  @media screen and (min-width: 601px) and (max-width: 1000px) {
+  @media screen and (min-width: 708px) and (max-width: 1000px) {
     .about-me h3 {
       text-align: left; } }
   @media screen and (min-width: 1420px) {
@@ -575,10 +601,10 @@ main .fixed-left-side {
   grid-gap: 1rem;
   margin-bottom: 1rem;
   padding-top: 0.5rem; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 707px) {
     .blog-gridlayout {
       grid-template-columns: repeat(auto-fill, minmax(200px, 2fr)); } }
-  @media screen and (min-width: 601px) and (max-width: 1000px) {
+  @media screen and (min-width: 708px) and (max-width: 1000px) {
     .blog-gridlayout {
       grid-template-columns: repeat(auto-fill, minmax(220px, 2fr)); } }
   @media screen and (min-width: 1420px) {
@@ -635,15 +661,22 @@ main .fixed-left-side {
           font-size: 1.8rem; }
         .blog-gridlayout .blog-entry .post-description p {
           font-size: 1.2rem; } }
-  .blog-gridlayout .comming-soon {
-    opacity: 0.4; }
+  .blog-gridlayout .comming-soon a {
+    opacity: 0.3; }
+  .blog-gridlayout .comming-soon h1 {
+    opacity: 0.3; }
+  .blog-gridlayout .comming-soon .img-box-sm {
+    opacity: 0.3; }
+  .blog-gridlayout .comming-soon p {
+    opacity: 0.3; }
 
 .blogpost-layout {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-gap: 1rem;
+  padding-bottom: 2rem;
   grid-template-areas: 'post sidebar'; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 707px) {
     .blogpost-layout {
       display: block; } }
   .blogpost-layout .sidebar {
@@ -664,14 +697,14 @@ main .fixed-left-side {
       transition: all 0.5s ease-out; }
       .blogpost-layout .sidebar .other-posts .other-posts-sections:hover {
         opacity: 1; }
-      @media screen and (min-width: 601px) and (max-width: 1000px) {
+      @media screen and (min-width: 708px) and (max-width: 1000px) {
         .blogpost-layout .sidebar .other-posts .other-posts-sections h4 {
           font-size: 1.2rem;
           font-weight: 500; } }
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 707px) {
         .blogpost-layout .sidebar .other-posts .other-posts-sections {
           margin-bottom: 0; } }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 707px) {
       .blogpost-layout .sidebar .other-posts {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(120px, 3fr));
@@ -693,34 +726,38 @@ main .fixed-left-side {
       border-top-left-radius: 5px;
       border-top-right-radius: 5px; }
       .blogpost-layout .blogpost .img-box-lg .empty-space {
-        min-height: 15vh; }
-      @media screen and (max-width: 600px) {
+        min-height: 20vh; }
+      @media screen and (max-width: 707px) {
         .blogpost-layout .blogpost .img-box-lg {
-          max-height: 35vh; } }
+          max-height: 45vh; } }
+      @media screen and (min-width: 708px) and (max-width: 1000px) {
+        .blogpost-layout .blogpost .img-box-lg h1 {
+          font-size: 2.5rem; } }
       .blogpost-layout .blogpost .img-box-lg .blog-heading {
         padding: 1rem;
         text-align: center;
         background: rgba(50, 53, 56, 0.5); }
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 707px) {
           .blogpost-layout .blogpost .img-box-lg .blog-heading {
             font-size: 1.7rem; } }
     .blogpost-layout .blogpost article {
-      min-height: 20vh; }
+      min-height: 25vh; }
       .blogpost-layout .blogpost article p {
         padding-top: 8vh;
-        text-align: center; }
+        text-align: center;
+        font-size: 2rem; }
 
 .gallery-layout {
   padding-top: 0.5rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
   grid-gap: 1rem; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 707px) {
     .gallery-layout {
       padding-top: 0.5rem;
       grid-gap: 0.5rem;
       grid-template-columns: repeat(auto-fill, minmax(150px, 2fr)); } }
-  @media screen and (min-width: 601px) and (max-width: 1000px) {
+  @media screen and (min-width: 708px) and (max-width: 1000px) {
     .gallery-layout {
       padding-top: 0.5rem; } }
   @media screen and (min-width: 1420px) {
@@ -761,7 +798,7 @@ main .fixed-left-side {
   grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
   grid-gap: 0.5rem;
   padding: 0; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 707px) {
     .photo-layout {
       padding-top: 0.5rem;
       grid-gap: 0.5rem;
