@@ -49,32 +49,21 @@ showing SASS convention**/
     width: 50%;
     height: 100vh;
     overflow: hidden; }
-    .menu-nav .coolpic, .menu-branding .coolpic {
+    .menu-nav .menu-contact, .menu-branding .menu-contact {
       margin-right: 0;
       align-items: center; }
-      .menu-nav .coolpic .profilepic, .menu-branding .coolpic .profilepic {
-        background-image: url(../img_files/branding-photo.jpg);
-        min-height: 8rem;
-        max-width: 8rem;
-        background-position: center;
-        background-size: cover;
-        border-style: solid;
-        border-color: #AA4B41;
-        border-radius: 20%;
-        opacity: 0.9;
-        margin-left: 20%; }
-        @media screen and (max-width: 707px) {
-          .menu-nav .coolpic .profilepic, .menu-branding .coolpic .profilepic {
-            min-width: 5rem;
-            max-height: 5rem; } }
-        @media screen and (min-width: 1420px) {
-          .menu-nav .coolpic .profilepic, .menu-branding .coolpic .profilepic {
-            min-height: 12rem;
-            max-width: 12rem; } }
-      .menu-nav .coolpic p, .menu-branding .coolpic p {
+      .menu-nav .menu-contact p, .menu-branding .menu-contact p {
         color: #f2f5f6;
         text-align: center;
-        padding: 0; }
+        padding: 0.5rem;
+        font-size: 1.3rem;
+        border-style: solid;
+        border-width: thin;
+        border-color: #AA4B41;
+        border-radius: 5px; }
+        @media screen and (max-width: 707px) {
+          .menu-nav .menu-contact p, .menu-branding .menu-contact p {
+            font-size: 1rem; } }
   .menu-nav {
     margin: 0;
     padding: 0;
@@ -275,7 +264,11 @@ body {
   body#bg-img {
     background: url("../img_files/DSC01071.jpg");
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: cover;
+    background-repeat: no-repeat; }
+    @media screen and (max-width: 707px) {
+      body#bg-img {
+        background: url("../img_files/bg-image-sm.jpg"); } }
     body#bg-img:after {
       /** after effect, has to include content **/
       content: '';
@@ -416,6 +409,12 @@ h5 {
   h4.no-side-padding,
   h5.no-side-padding {
     padding-left: 0; }
+  h1.h-secondary-color,
+  h2.h-secondary-color,
+  h3.h-secondary-color,
+  h4.h-secondary-color,
+  h5.h-secondary-color {
+    color: #AA4B41; }
 
 p {
   text-align: justify;
@@ -533,7 +532,8 @@ main .icons {
 main .fixed-left-side {
   position: fixed;
   top: calc(50% - 96px);
-  left: 0; }
+  left: 0;
+  padding-top: 0.5rem; }
   main .fixed-left-side a {
     display: block;
     color: #2D3033; }
@@ -567,7 +567,8 @@ main .fixed-left-side {
       .about-me h3 {
         font-size: 1.8rem; } }
   .about-me img {
-    max-width: 50%; }
+    max-width: 50%;
+    max-height: 65vh; }
     .about-me img.img1 {
       float: left;
       padding-top: 0.5rem;
