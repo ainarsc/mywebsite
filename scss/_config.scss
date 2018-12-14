@@ -7,6 +7,7 @@ $font-color-dark: #335252;
 $font-color-alternative: $secondary-color;
 $show-home-image: true;
 $home-image: url("../img_files/DSC01071.jpg");
+$home-image-sm: url("../img_files/bg-image-sm.jpg");
 $side-margin: 15%;
 $background-opacity: 0.5;
 $hidetext: none;
@@ -39,7 +40,10 @@ showing SASS convention**/
       background: $home-image;
       background-attachment: fixed;
       background-size: cover;
-
+      background-repeat: no-repeat;
+      @include smScreen{
+        background: $home-image-sm;
+      }
       &:after {
         /** after effect, has to include content **/
         content: '';
