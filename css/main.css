@@ -250,6 +250,24 @@ come in seperatly **/
 .singapore {
   background: url(../img_files/gallery_thumbnails/singapore_part1.jpg); }
 
+.vietnam4 {
+  background: url(../img_files/gallery_thumbnails/vietnam_part4.jpg); }
+
+.vietnam5 {
+  background: url(../img_files/gallery_thumbnails/vietnam_part5.jpg); }
+
+.vietnam6 {
+  background: url(../img_files/gallery_thumbnails/vietnam_part6.jpg); }
+
+.laos1 {
+  background: url(../img_files/gallery_thumbnails/laos_part1.jpg); }
+
+.laos2 {
+  background: url(../img_files/gallery_thumbnails/laos_part2.jpg); }
+
+.cambodia1 {
+  background: url(../img_files/gallery_thumbnails/cambodia_part1.jpg); }
+
 * {
   box-sizing: border-box; }
 
